@@ -16,11 +16,9 @@
 ## 3. Files over 100 MB
 No file in the repository exceeds 100 MB (largest: `profile.JPG`, 1.8 MB). The two named archives are **not referenced anywhere** in the HTML:
 - `pub/EPSL2021/AMRFs_20230227.tar.gz`: no reference.
-- `pub/GJI2023/repository20230306.tar.gz`: no reference. `data.html` links `pub/GJI2023/repository20230223.tar.gz` (different date); confirm whether it should be replaced by the 20230306 version.
+- `pub/GJI2023/repository20230306.tar.gz`: no reference. `data.html` previously linked the older `repository20230223.tar.gz`; now replaced by 20230306.
 Their sizes cannot be verified here; if >100 MB, host them as release assets.
 
-## 4. Proposed Release links (not uploaded yet)
-Suggested release tag `data-v1`:
-- `https://github.com/ky9999999/ky9999999.github.io/releases/download/data-v1/AMRFs_20230227.tar.gz`
-- `https://github.com/ky9999999/ky9999999.github.io/releases/download/data-v1/repository20230306.tar.gz`
-They are added only as an HTML comment in `data.html`, so no dead link is visible. After uploading, replace the GJI2023 `href` (and add an EPSL2021 entry if intended) with these URLs.
+## 4. Release links (tag `archive-2026`)
+- `data.html`: GJI2023 link changed from `./pub/GJI2023/repository20230223.tar.gz` to `https://github.com/ky9999999/ky9999999.github.io/releases/download/archive-2026/repository20230306.tar.gz` (description unchanged).
+- EPSL2021: `https://github.com/ky9999999/ky9999999.github.io/releases/download/archive-2026/AMRFs_20230227.tar.gz`. The page has no existing link to this file, so the URL is kept in an HTML comment in `data.html` rather than inventing new visible content.
