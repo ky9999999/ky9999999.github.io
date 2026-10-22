@@ -1,0 +1,12 @@
+
+# Provisional catalogues belong in the private repeater repository.
+/pub/Repeat_provisional/
+/pub/Repeat/*
+!/pub/Repeat/index.html
+!/pub/Repeat/yoshida_2022_jgr.html
+!/pub/Repeat/yoshida_2023_jgr.html
+!/pub/Repeat/yoshida_2025_grl.html
+!/pub/Repeat/yoshida_2026_grl.html
+# Never publish password files.
+.htpasswd
+htpasswd

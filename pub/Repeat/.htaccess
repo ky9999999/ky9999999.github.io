@@ -1,2 +1,0 @@
-RewriteEngine On
-RewriteRule !^(index\.html|yoshida_2023_jgr\.html|yoshida_2022_jgr\.html|yoshida_2026_grl\.html|yoshida_2025_grl\.html)?$ - [F,L]
