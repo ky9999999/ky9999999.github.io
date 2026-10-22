@@ -22,3 +22,18 @@ Their sizes cannot be verified here; if >100 MB, host them as release assets.
 ## 4. Release links (tag `archive-2026`)
 - `data.html`: GJI2023 link changed from `./pub/GJI2023/repository20230223.tar.gz` to `https://github.com/ky9999999/ky9999999.github.io/releases/download/archive-2026/repository20230306.tar.gz` (description unchanged).
 - EPSL2021: `https://github.com/ky9999999/ky9999999.github.io/releases/download/archive-2026/AMRFs_20230227.tar.gz`. The page has no existing link to this file, so the URL is kept in an HTML comment in `data.html` rather than inventing new visible content.
+
+## 5. Re-check against latest `main` (merged into this branch)
+Re-ran the link check over all `.html`/`.htm` files, now including `pub/`, `aki/`, `award/`.
+- All links in the root pages, `teleAMRFs/`, `aki/index*.html`, `cv.html`, `data.html`, `correction.html` now resolve. No file is over 25 MB; no `_`-prefixed paths (Jekyll-safe); no mixed-content `http://` GitHub links.
+- Fixed: `pub/{GRL2019,JGR2019,JGR2020,JGR2020b,Tecto2019}/index.html` "Home" link pointed to the old university server; now `https://ky9999999.github.io/`.
+- Fixed: legacy `pub/Tectono2015/data.html` linked the old `repository20230223.tar.gz`; now the `archive-2026` 20230306 release asset.
+- `data.html` GJI2023 link already points to the release. The EPSL2021 `AMRFs_20230227.tar.gz` URL is still only an HTML comment (no existing visible entry; no wording invented).
+
+### Remaining issues (not changed)
+- `pub/elast/index.html`: 15 PDFs (`1st.pdf` ... `botsu.pdf`, `9-2_20180722.pdf`, `11_20190722.pdf`) and `../style1.css`? (the CSS exists at root `style1.css`, i.e. `pub/style1.css` is what is missing) do not exist.
+- `pub/Tectono2015/data.html`: unlinked legacy copy of an old data page; its relative paths (`./pub/...`, `style1.css`) are wrong from that folder, so many links break. Nothing links to it; consider deleting or fixing.
+- `aki/chosakuyori/*.htm`: `sono2...` links flagged by the checker are Shift_JIS/entity artifacts (e.g. fullwidth `ｎ` in filenames); verify in a browser.
+- `Claude outputs/profile_crop_preview.jpg` is a stray folder name with a space; harmless but could be removed.
+- `contents.html`/`main.html` visible text still mentions the old URL (content, left as is).
+- Contact emails `@tohoku.ac.jp` are unchanged (addresses, not server dependencies).
