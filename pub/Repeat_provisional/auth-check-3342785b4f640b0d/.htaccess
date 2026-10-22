@@ -1,0 +1,5 @@
+# No HTTP logins are valid for this password-file storage directory.
+AuthType Basic
+AuthName "Private credential storage"
+AuthUserFile /dev/null
+Require valid-user

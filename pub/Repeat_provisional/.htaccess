@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Provisional repeater catalogues (ky999)"
+AuthUserFile "/home/www/htdocs/xyz/~yoshida/pub/Repeat_provisional/auth-check-3342785b4f640b0d/.htpasswd"
+Require user ky999
