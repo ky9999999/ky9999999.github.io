@@ -37,3 +37,11 @@ Re-ran the link check over all `.html`/`.htm` files, now including `pub/`, `aki/
 - `Claude outputs/profile_crop_preview.jpg` is a stray folder name with a space; harmless but could be removed.
 - `contents.html`/`main.html` visible text still mentions the old URL (content, left as is).
 - Contact emails `@tohoku.ac.jp` are unchanged (addresses, not server dependencies).
+
+## 6. Correction: three distinct archives (GitHub Release `archive-2026`)
+Earlier revisions wrongly replaced `repository20230223.tar.gz` with `repository20230306.tar.gz`. Corrected: the three archives are distinct and no link was substituted for another.
+- `repository20230223.tar.gz` -> `https://github.com/ky9999999/ky9999999.github.io/releases/download/archive-2026/repository20230223.tar.gz`
+  - Used by the existing links in `data.html` and `pub/Tectono2015/data.html` (original file reference preserved; only the host path changed to the Release). Owner is adding this asset to the release.
+- `AMRFs_20230227.tar.gz` -> `.../archive-2026/AMRFs_20230227.tar.gz` (not linked visibly; URL kept in an HTML comment in `data.html` since no page references it).
+- `repository20230306.tar.gz` -> `.../archive-2026/repository20230306.tar.gz` (not referenced by any page; no link added).
+Sections 3-5 above that describe replacing 20230223 with 20230306 are superseded by this section.
