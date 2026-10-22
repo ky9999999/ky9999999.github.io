@@ -31,7 +31,7 @@ Re-ran the link check over all `.html`/`.htm` files, now including `pub/`, `aki/
 - `data.html` GJI2023 link already points to the release. The EPSL2021 `AMRFs_20230227.tar.gz` URL is still only an HTML comment (no existing visible entry; no wording invented).
 
 ### Remaining issues (not changed)
-- `pub/elast/index.html`: 15 PDFs (`1st.pdf` ... `botsu.pdf`, `9-2_20180722.pdf`, `11_20190722.pdf`) and `../style1.css`? (the CSS exists at root `style1.css`, i.e. `pub/style1.css` is what is missing) do not exist.
+- `pub/elast/index.html`: 15 PDFs (`1st.pdf` ... `botsu.pdf`, `9-2_20180722.pdf`, `11_20190722.pdf`) and `pub/style1.css` (referenced as `../style1.css`; only the root `style1.css` exists) do not exist.
 - `pub/Tectono2015/data.html`: unlinked legacy copy of an old data page; its relative paths (`./pub/...`, `style1.css`) are wrong from that folder, so many links break. Nothing links to it; consider deleting or fixing.
 - `aki/chosakuyori/*.htm`: `sono2...` links flagged by the checker are Shift_JIS/entity artifacts (e.g. fullwidth `ｎ` in filenames); verify in a browser.
 - `Claude outputs/profile_crop_preview.jpg` is a stray folder name with a space; harmless but could be removed.
