@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.42;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  background-color: white;
+}
+
+.page {
+  display: flex;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 160px;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 0 20px;
+}
+
+dt {
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #dfefff;
+}
+
+.sidebar ol {
+  background: #f3fbff;
+  border: 2px skyblue dashed;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.publication-list {
+  background: #fff7ed;
+  border: 2px #e6b36a dashed;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+li {
+  margin-bottom: 6px;
+}
+
+.profile-photo {
+  float: right;
+  height: 300px;
+  margin: 25px 40px;
+}
+
+.inline-icon {
+  vertical-align: middle;
+}
+
+.emphasis {
+  color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .page {
+    display: block;
+  }
+
+  .sidebar {
+    width: auto;
+  }
+
+  .content {
+    padding: 0 12px;
+  }
+
+  .profile-photo {
+    float: none;
+    display: block;
+    height: auto;
+    max-width: 80%;
+    margin: 20px auto;
+  }
+}
+
+
+.publication-list {
+  padding-left: 2.5em;
+}
+
+.publication-list li {
+  margin-bottom: 0.8em;
+}
+
+
+

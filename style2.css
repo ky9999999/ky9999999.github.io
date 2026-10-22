@@ -1,0 +1,21 @@
+body {
+        width:150px;margin:auto
+	margin: 1.0;
+	padding: 0.;
+	line-height:1.42;
+	color:#222;
+	font-family:Arial, sans-serif;
+	font-size:0.9em;
+	background-repeat:no-repeat;
+	background-position:70% 25%; }
+dt   {
+	font-size:1.1em;
+	font-weight: bold;
+	background-color: #dfefff;}
+ol {
+  background: #f3fbff;
+  border: 2px skyblue dashed; 
+  }
+li {
+    margin-bottom: 2px;
+}
