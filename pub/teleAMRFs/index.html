@@ -1,0 +1,2328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teleseismic AMRFs</title>
+  <style>
+    body {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      color: #202124;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+    h1 { margin-bottom: 0.3rem; }
+    .subtitle { margin-top: 0; color: #555; }
+    .notice {
+      margin: 1.5rem 0;
+      padding: 0.8rem 1rem;
+      border-left: 4px solid #3b6ea8;
+      background: #f3f7fb;
+    }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td {
+      padding: 0.55rem 0.65rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      white-space: nowrap;
+    }
+    th { background: #f1f1f1; }
+    td:nth-child(6) { white-space: normal; min-width: 16rem; }
+    a { color: #075aa8; }
+    footer { margin-top: 2rem; color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Teleseismic Apparent Moment Rate Functions</h1>
+    <p><a href="index.html">Global M &ge; 7.3</a> | <a href="Japan.html">Japan M &ge; 6.7</a> | <a href="global_Japan.html">Japan events from Global</a></p>
+    <p class="subtitle">Automated results for global GCMT Mw &ge; 7.3 earthquakes</p>
+
+    <div class="notice">
+      Syngine PREM (prem_i_2s) displacement Green functions; GCMT centroid sources. AMRF measurements follow the current manuscript (Simple25 initiation; 30% amplitude-excess centroid; 10% self-centered width; no station-delay correction). VR >= 70% and SNR >= 3 records are blue; others are gray. Observed hypocenter-P / synthetic centroid-P; raw A50 alpha3 compact endpoint, 5-s taper; 600-s Sumatra exception. Thick blue traces identify the station nearest the event-median uncorrected scaled energy (no highlight when unavailable). Measurements use the compact endpoint and native GF delayed by 1.5 s. Selection uses GCMT Mw. Events without a saved Syngine result are marked pending.
+      Event parameters may be revised as earthquake catalogs are updated.
+    </div>
+
+    <p>249 event results are currently available. Updated 2026-10-21 18:34 UTC.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Origin time</th>
+            <th>M</th>
+            <th>Lat.</th>
+            <th>Lon.</th>
+            <th>Depth (km)</th>
+            <th>Region</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>2026-10-09 17:56:06.036 UTC</td>
+          <td>7.7</td>
+          <td>7.59</td>
+          <td>-80.77</td>
+          <td>12.6</td>
+          <td>12 km WSW of Pitaloza Arriba, Panama</td>
+          <td><a href="index_viewer.html?event=2026-10-09_17-56-06.036Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-08-14 21:58:21.561 UTC</td>
+          <td>7.8</td>
+          <td>-8.34</td>
+          <td>121.34</td>
+          <td>10.0</td>
+          <td>66 km NNW of Ende, Indonesia</td>
+          <td><a href="index_viewer.html?event=2026-08-14_21-58-21.561Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-08-10 12:34:28.828 UTC</td>
+          <td>7.5</td>
+          <td>4.86</td>
+          <td>-76.26</td>
+          <td>116.1</td>
+          <td>4 km SSW of San Jose del Palmar, Colombia</td>
+          <td><a href="index_viewer.html?event=2026-08-10_12-34-28.828Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-07-17 14:48:39.769 UTC</td>
+          <td>7.3</td>
+          <td>14.57</td>
+          <td>-92.96</td>
+          <td>22.0</td>
+          <td>60 km WSW of Puerto Madero, Mexico</td>
+          <td><a href="index_viewer.html?event=2026-07-17_14-48-39.769Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-06-24 22:04:31.806 UTC</td>
+          <td>7.5</td>
+          <td>10.37</td>
+          <td>-68.56</td>
+          <td>10.0</td>
+          <td>20 km E of San Felipe, Venezuela</td>
+          <td><a href="index_viewer.html?event=2026-06-24_22-04-31.806Z_mww7.2">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-06-07 23:37:41.970 UTC</td>
+          <td>7.8</td>
+          <td>5.60</td>
+          <td>125.06</td>
+          <td>57.0</td>
+          <td>25 km SW of Kablalan, Philippines</td>
+          <td><a href="index_viewer.html?event=2026-06-07_23-37-41.970Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-04-20 07:52:58.908 UTC</td>
+          <td>7.5</td>
+          <td>39.97</td>
+          <td>143.06</td>
+          <td>25.0</td>
+          <td>102 km ENE of Miyako, Japan</td>
+          <td><a href="index_viewer.html?event=2026-04-20_07-52-58.908Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-04-01 22:48:13.063 UTC</td>
+          <td>7.4</td>
+          <td>1.09</td>
+          <td>126.24</td>
+          <td>35.0</td>
+          <td>129 km ESE of Bitung, Indonesia</td>
+          <td><a href="index_viewer.html?event=2026-04-01_22-48-13.063Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-03-30 08:44:13.780 UTC</td>
+          <td>7.3</td>
+          <td>-15.29</td>
+          <td>167.58</td>
+          <td>120.6</td>
+          <td>51 km ENE of Luganville, Vanuatu</td>
+          <td><a href="index_viewer.html?event=2026-03-30_08-44-13.780Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2026-03-24 04:37:51.627 UTC</td>
+          <td>7.5</td>
+          <td>-18.54</td>
+          <td>-175.48</td>
+          <td>234.0</td>
+          <td>158 km W of Neiafu, Tonga</td>
+          <td><a href="index_viewer.html?event=2026-03-24_04-37-51.627Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-12-08 14:15:09.896 UTC</td>
+          <td>7.6</td>
+          <td>41.00</td>
+          <td>142.18</td>
+          <td>40.7</td>
+          <td>2025 Aomori Prefecture, Japan Earthquake</td>
+          <td><a href="index_viewer.html?event=2025-12-08_14-15-09.896Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-10-10 20:29:20.075 UTC</td>
+          <td>7.7</td>
+          <td>-60.19</td>
+          <td>-61.82</td>
+          <td>5.6</td>
+          <td>Drake Passage</td>
+          <td><a href="index_viewer.html?event=2025-10-10_20-29-20.075Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-10-10 01:43:59.585 UTC</td>
+          <td>7.4</td>
+          <td>7.29</td>
+          <td>126.69</td>
+          <td>59.4</td>
+          <td>12 km E of Santiago, Philippines</td>
+          <td><a href="index_viewer.html?event=2025-10-10_01-43-59.585Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-09-18 18:58:14.939 UTC</td>
+          <td>7.9</td>
+          <td>53.14</td>
+          <td>160.72</td>
+          <td>27.0</td>
+          <td>140 km E of Petropavlovsk-Kamchatsky, Russia</td>
+          <td><a href="index_viewer.html?event=2025-09-18_18-58-14.939Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-09-13 02:37:56.761 UTC</td>
+          <td>7.3</td>
+          <td>53.20</td>
+          <td>160.19</td>
+          <td>58.0</td>
+          <td>105 km E of Petropavlovsk-Kamchatsky, Russia</td>
+          <td><a href="index_viewer.html?event=2025-09-13_02-37-56.761Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-08-22 02:16:18.246 UTC</td>
+          <td>7.6</td>
+          <td>-60.32</td>
+          <td>-61.92</td>
+          <td>10.0</td>
+          <td>2025 Southern Drake Passage Earthquake</td>
+          <td><a href="index_viewer.html?event=2025-08-22_02-16-18.246Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-07-29 23:24:52.483 UTC</td>
+          <td>8.7</td>
+          <td>52.49</td>
+          <td>160.24</td>
+          <td>35.0</td>
+          <td>2025 Kamchatka Peninsula, Russia Earthquake</td>
+          <td><a href="index_viewer.html?event=2025-07-29_23-24-52.483Z_mww8.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-07-20 06:49:04.327 UTC</td>
+          <td>7.5</td>
+          <td>52.83</td>
+          <td>160.68</td>
+          <td>34.0</td>
+          <td>2025 Eastern Kamchatka, Russia Earthquake</td>
+          <td><a href="index_viewer.html?event=2025-07-20_06-49-04.327Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-05-02 12:58:26.014 UTC</td>
+          <td>7.5</td>
+          <td>-56.81</td>
+          <td>-68.10</td>
+          <td>10.0</td>
+          <td>2025 Drake Passage Earthquake</td>
+          <td><a href="index_viewer.html?event=2025-05-02_12-58-26.014Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-03-28 06:20:52.715 UTC</td>
+          <td>7.7</td>
+          <td>22.01</td>
+          <td>95.94</td>
+          <td>10.0</td>
+          <td>2025 Mandalay, Burma (Myanmar) Earthquake</td>
+          <td><a href="index_viewer.html?event=2025-03-28_06-20-52.715Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2025-02-08 23:23:14.697 UTC</td>
+          <td>7.6</td>
+          <td>17.65</td>
+          <td>-82.39</td>
+          <td>14.3</td>
+          <td>210 km SSW of George Town, Cayman Islands</td>
+          <td><a href="index_viewer.html?event=2025-02-08_23-23-14.697Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2024-12-17 01:47:25.741 UTC</td>
+          <td>7.3</td>
+          <td>-17.69</td>
+          <td>168.08</td>
+          <td>54.4</td>
+          <td>24 km WNW of Port-Vila, Vanuatu</td>
+          <td><a href="index_viewer.html?event=2024-12-17_01-47-25.741Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2024-07-19 01:50:48.571 UTC</td>
+          <td>7.3</td>
+          <td>-23.08</td>
+          <td>-67.84</td>
+          <td>127.3</td>
+          <td>41 km ESE of San Pedro de Atacama, Chile</td>
+          <td><a href="index_viewer.html?event=2024-07-19_01-50-48.571Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2024-04-02 23:58:12.173 UTC</td>
+          <td>7.4</td>
+          <td>23.84</td>
+          <td>121.60</td>
+          <td>40.0</td>
+          <td>15 km S of Hualien City, Taiwan</td>
+          <td><a href="index_viewer.html?event=2024-04-02_23-58-12.173Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2024-01-01 07:10:09.476 UTC</td>
+          <td>7.5</td>
+          <td>37.49</td>
+          <td>137.27</td>
+          <td>10.0</td>
+          <td>2024 Noto Peninsula, Japan Earthquake</td>
+          <td><a href="index_viewer.html?event=2024-01-01_07-10-09.476Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2023-12-02 14:37:04.454 UTC</td>
+          <td>7.6</td>
+          <td>8.53</td>
+          <td>126.42</td>
+          <td>40.0</td>
+          <td>19 km E of Gamut, Philippines</td>
+          <td><a href="index_viewer.html?event=2023-12-02_14-37-04.454Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2023-05-19 02:57:03.172 UTC</td>
+          <td>7.7</td>
+          <td>-23.21</td>
+          <td>170.74</td>
+          <td>18.1</td>
+          <td>southeast of the Loyalty Islands</td>
+          <td><a href="index_viewer.html?event=2023-05-19_02-57-03.172Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2023-05-10 16:02:00.334 UTC</td>
+          <td>7.5</td>
+          <td>-15.63</td>
+          <td>-174.49</td>
+          <td>210.0</td>
+          <td>82 km WNW of Hihifo, Tonga</td>
+          <td><a href="index_viewer.html?event=2023-05-10_16-02-00.334Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2023-02-06 10:24:48.811 UTC</td>
+          <td>7.7</td>
+          <td>38.01</td>
+          <td>37.20</td>
+          <td>7.4</td>
+          <td>Elbistan earthquake, Kahramanmaras earthquake sequence</td>
+          <td><a href="index_viewer.html?event=2023-02-06_10-24-48.811Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2023-02-06 01:17:34.342 UTC</td>
+          <td>7.8</td>
+          <td>37.23</td>
+          <td>37.01</td>
+          <td>10.0</td>
+          <td>Pazarcik earthquake, Kahramanmaras earthquake sequence</td>
+          <td><a href="index_viewer.html?event=2023-02-06_01-17-34.342Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2023-01-09 17:47:35.037 UTC</td>
+          <td>7.6</td>
+          <td>-7.06</td>
+          <td>130.01</td>
+          <td>105.0</td>
+          <td>Pulau Pulau Tanimbar, Indonesia</td>
+          <td><a href="index_viewer.html?event=2023-01-09_17-47-35.037Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2022-09-19 18:05:08.217 UTC</td>
+          <td>7.7</td>
+          <td>18.46</td>
+          <td>-102.96</td>
+          <td>26.9</td>
+          <td>35 km SSW of Aguililla, Mexico</td>
+          <td><a href="index_viewer.html?event=2022-09-19_18-05-08.217Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2022-09-10 23:47:00.233 UTC</td>
+          <td>7.6</td>
+          <td>-6.29</td>
+          <td>146.50</td>
+          <td>116.0</td>
+          <td>70 km E of Kainantu, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2022-09-10_23-47-00.233Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2022-03-16 14:36:30.997 UTC</td>
+          <td>7.3</td>
+          <td>37.71</td>
+          <td>141.58</td>
+          <td>41.0</td>
+          <td>57 km ENE of Namie, Japan</td>
+          <td><a href="index_viewer.html?event=2022-03-16_14-36-30.997Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-12-29 18:25:51.962 UTC</td>
+          <td>7.3</td>
+          <td>-7.55</td>
+          <td>127.58</td>
+          <td>165.5</td>
+          <td>125 km NNE of Lospalos, Timor Leste</td>
+          <td><a href="index_viewer.html?event=2021-12-29_18-25-51.962Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-12-14 03:20:23.809 UTC</td>
+          <td>7.3</td>
+          <td>-7.60</td>
+          <td>122.23</td>
+          <td>14.3</td>
+          <td>Flores Sea</td>
+          <td><a href="index_viewer.html?event=2021-12-14_03-20-23.809Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-11-28 10:52:14.579 UTC</td>
+          <td>7.5</td>
+          <td>-4.47</td>
+          <td>-76.81</td>
+          <td>126.0</td>
+          <td>43 km NNW of Barranca, Peru</td>
+          <td><a href="index_viewer.html?event=2021-11-28_10-52-14.579Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-08-12 18:32:52.464 UTC</td>
+          <td>8.3</td>
+          <td>-57.57</td>
+          <td>-25.03</td>
+          <td>47.2</td>
+          <td>South Sandwich Islands region</td>
+          <td><a href="index_viewer.html?event=2021-08-12_18-32-52.464Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-07-29 06:15:49.188 UTC</td>
+          <td>8.2</td>
+          <td>55.36</td>
+          <td>-157.89</td>
+          <td>35.0</td>
+          <td>2021 Chignik, Alaska Earthquake</td>
+          <td><a href="index_viewer.html?event=2021-07-29_06-15-49.188Z_mww8.2">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-05-21 18:04:13.565 UTC</td>
+          <td>7.4</td>
+          <td>34.60</td>
+          <td>98.25</td>
+          <td>10.0</td>
+          <td>Southern Qinghai, China</td>
+          <td><a href="index_viewer.html?event=2021-05-21_18-04-13.565Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-03-04 19:28:33.178 UTC</td>
+          <td>8.1</td>
+          <td>-29.72</td>
+          <td>-177.28</td>
+          <td>28.9</td>
+          <td>2021 Kermadec Islands, New Zealand Earthquake</td>
+          <td><a href="index_viewer.html?event=2021-03-04_19-28-33.178Z_mww8.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-03-04 17:41:23.370 UTC</td>
+          <td>7.4</td>
+          <td>-29.68</td>
+          <td>-177.84</td>
+          <td>43.0</td>
+          <td>Kermadec Islands, New Zealand</td>
+          <td><a href="index_viewer.html?event=2021-03-04_17-41-23.370Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2021-02-10 13:19:55.530 UTC</td>
+          <td>7.7</td>
+          <td>-23.05</td>
+          <td>171.66</td>
+          <td>10.0</td>
+          <td>southeast of the Loyalty Islands</td>
+          <td><a href="index_viewer.html?event=2021-02-10_13-19-55.530Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2020-10-19 20:54:38.950 UTC</td>
+          <td>7.6</td>
+          <td>54.60</td>
+          <td>-159.63</td>
+          <td>28.4</td>
+          <td>2020 Sand Point, Alaska Earthquake</td>
+          <td><a href="index_viewer.html?event=2020-10-19_20-54-38.950Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2020-07-22 06:12:44.810 UTC</td>
+          <td>7.8</td>
+          <td>55.07</td>
+          <td>-158.60</td>
+          <td>28.0</td>
+          <td>2020 Perryville, Alaska Earthquake</td>
+          <td><a href="index_viewer.html?event=2020-07-22_06-12-44.810Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2020-06-23 15:29:04.350 UTC</td>
+          <td>7.4</td>
+          <td>15.89</td>
+          <td>-96.01</td>
+          <td>20.0</td>
+          <td>9 km SE of Santa Maria Xadani, Mexico</td>
+          <td><a href="index_viewer.html?event=2020-06-23_15-29-04.350Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2020-06-18 12:49:53.844 UTC</td>
+          <td>7.4</td>
+          <td>-33.29</td>
+          <td>-177.86</td>
+          <td>10.0</td>
+          <td>south of the Kermadec Islands</td>
+          <td><a href="index_viewer.html?event=2020-06-18_12-49-53.844Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2020-03-25 02:49:21.160 UTC</td>
+          <td>7.5</td>
+          <td>48.96</td>
+          <td>157.70</td>
+          <td>57.8</td>
+          <td>221 km SSE of Severo-Kurilsk, Russia</td>
+          <td><a href="index_viewer.html?event=2020-03-25_02-49-21.160Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2020-01-28 19:10:24.918 UTC</td>
+          <td>7.7</td>
+          <td>19.42</td>
+          <td>-78.76</td>
+          <td>14.9</td>
+          <td>123 km NNW of Lucea, Jamaica</td>
+          <td><a href="index_viewer.html?event=2020-01-28_19-10-24.918Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2019-05-26 07:41:15.073 UTC</td>
+          <td>8.0</td>
+          <td>-5.81</td>
+          <td>-75.27</td>
+          <td>122.6</td>
+          <td>78 km NE of Navarro, Peru</td>
+          <td><a href="index_viewer.html?event=2019-05-26_07-41-15.073Z_mww8.0">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2019-05-14 12:58:25.939 UTC</td>
+          <td>7.6</td>
+          <td>-4.05</td>
+          <td>152.60</td>
+          <td>10.0</td>
+          <td>48 km NE of Kokopo, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2019-05-14_12-58-25.939Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2019-02-22 10:17:23.770 UTC</td>
+          <td>7.5</td>
+          <td>-2.19</td>
+          <td>-77.05</td>
+          <td>145.0</td>
+          <td>115 km ESE of Palora, Ecuador</td>
+          <td><a href="index_viewer.html?event=2019-02-22_10-17-23.770Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2018-12-05 04:18:08.420 UTC</td>
+          <td>7.5</td>
+          <td>-21.95</td>
+          <td>169.43</td>
+          <td>10.0</td>
+          <td>166 km ESE of Tadine, New Caledonia</td>
+          <td><a href="index_viewer.html?event=2018-12-05_04-18-08.420Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2018-09-28 10:02:45.250 UTC</td>
+          <td>7.6</td>
+          <td>-0.26</td>
+          <td>119.85</td>
+          <td>20.0</td>
+          <td>72 km N of Palu, Indonesia</td>
+          <td><a href="index_viewer.html?event=2018-09-28_10-02-45.250Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2018-09-06 15:49:18.710 UTC</td>
+          <td>7.9</td>
+          <td>-18.47</td>
+          <td>179.35</td>
+          <td>670.8</td>
+          <td>45 km S of Levuka, Fiji</td>
+          <td><a href="index_viewer.html?event=2018-09-06_15-49-18.710Z_mww7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2018-08-19 00:19:40.670 UTC</td>
+          <td>8.2</td>
+          <td>-18.11</td>
+          <td>-178.15</td>
+          <td>600.0</td>
+          <td>2018 Fiji Earthquake</td>
+          <td><a href="index_viewer.html?event=2018-08-19_00-19-40.670Z_mww8.2">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2018-02-25 17:44:44.140 UTC</td>
+          <td>7.5</td>
+          <td>-6.07</td>
+          <td>142.75</td>
+          <td>25.2</td>
+          <td>32 km SW of Tari, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2018-02-25_17-44-44.140Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2018-01-23 09:31:40.890 UTC</td>
+          <td>7.9</td>
+          <td>56.00</td>
+          <td>-149.17</td>
+          <td>14.1</td>
+          <td>261 km SE of Chiniak, Alaska</td>
+          <td><a href="index_viewer.html?event=2018-01-23_09-31-40.890Z_mww7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2018-01-10 02:51:33.290 UTC</td>
+          <td>7.5</td>
+          <td>17.48</td>
+          <td>-83.52</td>
+          <td>19.0</td>
+          <td>203 km NNE of Barra Patuca, Honduras</td>
+          <td><a href="index_viewer.html?event=2018-01-10_02-51-33.290Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2017-11-12 18:18:17.180 UTC</td>
+          <td>7.4</td>
+          <td>34.91</td>
+          <td>45.96</td>
+          <td>19.0</td>
+          <td>29 km S of Halabja, Iraq</td>
+          <td><a href="index_viewer.html?event=2017-11-12_18-18-17.180Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2017-09-08 04:49:19.180 UTC</td>
+          <td>8.2</td>
+          <td>15.02</td>
+          <td>-93.90</td>
+          <td>47.4</td>
+          <td>2017 Tehuantepec, Mexico Earthquake</td>
+          <td><a href="index_viewer.html?event=2017-09-08_04-49-19.180Z_mww8.2">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2017-07-17 23:34:13.740 UTC</td>
+          <td>7.8</td>
+          <td>54.44</td>
+          <td>168.86</td>
+          <td>10.0</td>
+          <td>Komandorskiye Ostrova, Russia region</td>
+          <td><a href="index_viewer.html?event=2017-07-17_23-34-13.740Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2017-01-22 04:30:22.960 UTC</td>
+          <td>7.9</td>
+          <td>-6.25</td>
+          <td>155.17</td>
+          <td>135.0</td>
+          <td>35 km WNW of Panguna, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2017-01-22_04-30-22.960Z_mww7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2016-12-25 14:22:27.010 UTC</td>
+          <td>7.6</td>
+          <td>-43.41</td>
+          <td>-73.94</td>
+          <td>38.0</td>
+          <td>41 km SW of Quellon, Chile</td>
+          <td><a href="index_viewer.html?event=2016-12-25_14-22-27.010Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2016-12-17 10:51:10.500 UTC</td>
+          <td>7.9</td>
+          <td>-4.50</td>
+          <td>153.52</td>
+          <td>94.5</td>
+          <td>140 km E of Kokopo, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2016-12-17_10-51-10.500Z_mww7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2016-12-08 17:38:46.280 UTC</td>
+          <td>7.8</td>
+          <td>-10.68</td>
+          <td>161.33</td>
+          <td>40.0</td>
+          <td>69 km WSW of Kirakira, Solomon Islands</td>
+          <td><a href="index_viewer.html?event=2016-12-08_17-38-46.280Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2016-11-13 11:02:56.340 UTC</td>
+          <td>7.8</td>
+          <td>-42.74</td>
+          <td>173.05</td>
+          <td>15.1</td>
+          <td>53 km NNE of Amberley, New Zealand</td>
+          <td><a href="index_viewer.html?event=2016-11-13_11-02-56.340Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2016-08-19 07:32:22.710 UTC</td>
+          <td>7.5</td>
+          <td>-55.29</td>
+          <td>-31.88</td>
+          <td>10.0</td>
+          <td>South Georgia Island region</td>
+          <td><a href="index_viewer.html?event=2016-08-19_07-32-22.710Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2016-07-29 21:18:24.740 UTC</td>
+          <td>7.7</td>
+          <td>18.54</td>
+          <td>145.51</td>
+          <td>196.0</td>
+          <td>Pagan region, Northern Mariana Islands</td>
+          <td><a href="index_viewer.html?event=2016-07-29_21-18-24.740Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2016-04-16 23:58:36.980 UTC</td>
+          <td>7.8</td>
+          <td>0.38</td>
+          <td>-79.92</td>
+          <td>20.6</td>
+          <td>27 km SSE of Muisne, Ecuador</td>
+          <td><a href="index_viewer.html?event=2016-04-16_23-58-36.980Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2016-03-02 12:49:48.110 UTC</td>
+          <td>7.8</td>
+          <td>-4.95</td>
+          <td>94.33</td>
+          <td>24.0</td>
+          <td>southwest of Sumatra, Indonesia</td>
+          <td><a href="index_viewer.html?event=2016-03-02_12-49-48.110Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2015-11-24 22:50:54.370 UTC</td>
+          <td>7.7</td>
+          <td>-10.06</td>
+          <td>-71.02</td>
+          <td>620.6</td>
+          <td>185 km WNW of Inapari, Peru</td>
+          <td><a href="index_viewer.html?event=2015-11-24_22-50-54.370Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2015-11-24 22:45:38.880 UTC</td>
+          <td>7.5</td>
+          <td>-10.54</td>
+          <td>-70.94</td>
+          <td>606.2</td>
+          <td>155 km WNW of Inapari, Peru</td>
+          <td><a href="index_viewer.html?event=2015-11-24_22-45-38.880Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2015-10-26 09:09:42.560 UTC</td>
+          <td>7.5</td>
+          <td>36.52</td>
+          <td>70.37</td>
+          <td>231.0</td>
+          <td>Hindu Kush region, Afghanistan</td>
+          <td><a href="index_viewer.html?event=2015-10-26_09-09-42.560Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2015-09-16 22:54:32.860 UTC</td>
+          <td>8.3</td>
+          <td>-31.57</td>
+          <td>-71.67</td>
+          <td>22.4</td>
+          <td>48 km W of Illapel, Chile</td>
+          <td><a href="index_viewer.html?event=2015-09-16_22-54-32.860Z_mww8.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2015-05-30 11:23:02.110 UTC</td>
+          <td>7.9</td>
+          <td>27.84</td>
+          <td>140.49</td>
+          <td>664.0</td>
+          <td>Bonin Islands, Japan region</td>
+          <td><a href="index_viewer.html?event=2015-05-30_11-23-02.110Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2015-05-05 01:44:06.380 UTC</td>
+          <td>7.5</td>
+          <td>-5.46</td>
+          <td>151.88</td>
+          <td>55.0</td>
+          <td>131 km SSW of Kokopo, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2015-05-05_01-44-06.380Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2015-04-25 06:11:25.950 UTC</td>
+          <td>7.9</td>
+          <td>28.23</td>
+          <td>84.73</td>
+          <td>8.2</td>
+          <td>67 km NNE of Bharatpur, Nepal</td>
+          <td><a href="index_viewer.html?event=2015-04-25_06-11-25.950Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2015-03-29 23:48:31.010 UTC</td>
+          <td>7.5</td>
+          <td>-4.73</td>
+          <td>152.56</td>
+          <td>41.0</td>
+          <td>53 km SE of Kokopo, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2015-03-29_23-48-31.010Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2014-06-23 20:53:09.700 UTC</td>
+          <td>7.9</td>
+          <td>51.85</td>
+          <td>178.74</td>
+          <td>109.0</td>
+          <td>Rat Islands, Aleutian Islands, Alaska</td>
+          <td><a href="index_viewer.html?event=2014-06-23_20-53-09.700Z_mww7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2014-04-19 13:28:00.810 UTC</td>
+          <td>7.5</td>
+          <td>-6.75</td>
+          <td>155.02</td>
+          <td>43.4</td>
+          <td>70 km SW of Panguna, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2014-04-19_13-28-00.810Z_mww7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2014-04-13 12:36:19.230 UTC</td>
+          <td>7.4</td>
+          <td>-11.46</td>
+          <td>162.05</td>
+          <td>39.0</td>
+          <td>112 km S of Kirakira, Solomon Islands</td>
+          <td><a href="index_viewer.html?event=2014-04-13_12-36-19.230Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2014-04-12 20:14:39.300 UTC</td>
+          <td>7.6</td>
+          <td>-11.27</td>
+          <td>162.15</td>
+          <td>22.6</td>
+          <td>93 km SSE of Kirakira, Solomon Islands</td>
+          <td><a href="index_viewer.html?event=2014-04-12_20-14-39.300Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2014-04-03 02:43:13.110 UTC</td>
+          <td>7.7</td>
+          <td>-20.57</td>
+          <td>-70.49</td>
+          <td>22.4</td>
+          <td>53 km SW of Iquique, Chile</td>
+          <td><a href="index_viewer.html?event=2014-04-03_02-43-13.110Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2014-04-01 23:46:47.260 UTC</td>
+          <td>8.1</td>
+          <td>-19.61</td>
+          <td>-70.77</td>
+          <td>25.0</td>
+          <td>93 km NW of Iquique, Chile</td>
+          <td><a href="index_viewer.html?event=2014-04-01_23-46-47.260Z_mww8.2">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-11-17 09:04:55.530 UTC</td>
+          <td>7.8</td>
+          <td>-60.27</td>
+          <td>-46.40</td>
+          <td>10.0</td>
+          <td>Scotia Sea</td>
+          <td><a href="index_viewer.html?event=2013-11-17_09-04-55.530Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-09-24 11:29:47.970 UTC</td>
+          <td>7.8</td>
+          <td>26.95</td>
+          <td>65.50</td>
+          <td>15.0</td>
+          <td>113 km NW of Bela, Pakistan</td>
+          <td><a href="index_viewer.html?event=2013-09-24_11-29-47.970Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-07-15 14:03:39.880 UTC</td>
+          <td>7.3</td>
+          <td>-60.86</td>
+          <td>-25.07</td>
+          <td>11.0</td>
+          <td>South Sandwich Islands region</td>
+          <td><a href="index_viewer.html?event=2013-07-15_14-03-39.880Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-07-07 18:35:30.740 UTC</td>
+          <td>7.3</td>
+          <td>-3.92</td>
+          <td>153.93</td>
+          <td>385.5</td>
+          <td>190 km ENE of Kokopo, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2013-07-07_18-35-30.740Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-05-24 05:44:48.980 UTC</td>
+          <td>8.3</td>
+          <td>54.89</td>
+          <td>153.22</td>
+          <td>598.1</td>
+          <td>2013 Sea of Okhotsk Earthquake</td>
+          <td><a href="index_viewer.html?event=2013-05-24_05-44-48.980Z_mww8.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-05-23 17:19:04.750 UTC</td>
+          <td>7.4</td>
+          <td>-23.01</td>
+          <td>-177.23</td>
+          <td>173.7</td>
+          <td>292 km SW of Vaini, Tonga</td>
+          <td><a href="index_viewer.html?event=2013-05-23_17-19-04.750Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-04-16 10:44:20.180 UTC</td>
+          <td>7.7</td>
+          <td>28.03</td>
+          <td>62.00</td>
+          <td>80.0</td>
+          <td>79 km ESE of Khash, Iran</td>
+          <td><a href="index_viewer.html?event=2013-04-16_10-44-20.180Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-02-06 01:12:25.830 UTC</td>
+          <td>7.9</td>
+          <td>-10.80</td>
+          <td>165.11</td>
+          <td>24.0</td>
+          <td>2013 Santa Cruz Islands Earthquake</td>
+          <td><a href="index_viewer.html?event=2013-02-06_01-12-25.830Z_mww8.0">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2013-01-05 08:58:14.957 UTC</td>
+          <td>7.5</td>
+          <td>55.23</td>
+          <td>-134.86</td>
+          <td>8.7</td>
+          <td>110 km SW of Edna Bay, Alaska</td>
+          <td><a href="index_viewer.html?event=2013-01-05_08-58-14.957Z_mw7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-11-07 16:35:46.930 UTC</td>
+          <td>7.4</td>
+          <td>13.99</td>
+          <td>-91.89</td>
+          <td>24.0</td>
+          <td>33 km S of Champerico, Guatemala</td>
+          <td><a href="index_viewer.html?event=2012-11-07_16-35-46.930Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-10-28 03:04:08.820 UTC</td>
+          <td>7.8</td>
+          <td>52.79</td>
+          <td>-132.10</td>
+          <td>14.0</td>
+          <td>206 km SW of Prince Rupert, Canada</td>
+          <td><a href="index_viewer.html?event=2012-10-28_03-04-08.820Z_mww7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-09-05 14:42:07.800 UTC</td>
+          <td>7.6</td>
+          <td>10.09</td>
+          <td>-85.31</td>
+          <td>35.0</td>
+          <td>11 km ENE of Hojancha, Costa Rica</td>
+          <td><a href="index_viewer.html?event=2012-09-05_14-42-07.800Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-08-31 12:47:33.380 UTC</td>
+          <td>7.6</td>
+          <td>10.81</td>
+          <td>126.64</td>
+          <td>28.0</td>
+          <td>89 km E of Sulangan, Philippines</td>
+          <td><a href="index_viewer.html?event=2012-08-31_12-47-33.380Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-08-27 04:37:19.430 UTC</td>
+          <td>7.3</td>
+          <td>12.14</td>
+          <td>-88.59</td>
+          <td>28.0</td>
+          <td>126 km S of Puerto El Triunfo, El Salvador</td>
+          <td><a href="index_viewer.html?event=2012-08-27_04-37-19.430Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-08-14 02:59:38.460 UTC</td>
+          <td>7.7</td>
+          <td>49.80</td>
+          <td>145.06</td>
+          <td>583.2</td>
+          <td>156 km ENE of Poronaysk, Russia</td>
+          <td><a href="index_viewer.html?event=2012-08-14_02-59-38.460Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-04-11 10:43:10.850 UTC</td>
+          <td>8.2</td>
+          <td>0.80</td>
+          <td>92.46</td>
+          <td>25.1</td>
+          <td>2012 Wharton Basin Aftershock</td>
+          <td><a href="index_viewer.html?event=2012-04-11_10-43-10.850Z_mwc8.2">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-04-11 08:38:36.720 UTC</td>
+          <td>8.6</td>
+          <td>2.33</td>
+          <td>93.06</td>
+          <td>20.0</td>
+          <td>2012 Wharton Basin Earthquake</td>
+          <td><a href="index_viewer.html?event=2012-04-11_08-38-36.720Z_mw8.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2012-03-20 18:02:47.440 UTC</td>
+          <td>7.5</td>
+          <td>16.49</td>
+          <td>-98.23</td>
+          <td>20.0</td>
+          <td>6 km E of Santiago Llano Grande, Mexico</td>
+          <td><a href="index_viewer.html?event=2012-03-20_18-02-47.440Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2011-10-21 17:57:16.100 UTC</td>
+          <td>7.4</td>
+          <td>-28.99</td>
+          <td>-176.24</td>
+          <td>33.0</td>
+          <td>Kermadec Islands region</td>
+          <td><a href="index_viewer.html?event=2011-10-21_17-57-16.100Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2011-09-15 19:31:04.080 UTC</td>
+          <td>7.3</td>
+          <td>-21.61</td>
+          <td>-179.53</td>
+          <td>644.6</td>
+          <td>Fiji region</td>
+          <td><a href="index_viewer.html?event=2011-09-15_19-31-04.080Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2011-07-06 19:03:18.260 UTC</td>
+          <td>7.6</td>
+          <td>-29.54</td>
+          <td>-176.34</td>
+          <td>17.0</td>
+          <td>Kermadec Islands region</td>
+          <td><a href="index_viewer.html?event=2011-07-06_19-03-18.260Z_mww7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2011-03-11 06:25:50.300 UTC</td>
+          <td>7.6</td>
+          <td>38.06</td>
+          <td>144.59</td>
+          <td>18.6</td>
+          <td>272 km ESE of Kamaishi, Japan</td>
+          <td><a href="index_viewer.html?event=2011-03-11_06-25-50.300Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2011-03-11 06:15:40.280 UTC</td>
+          <td>7.9</td>
+          <td>36.28</td>
+          <td>141.11</td>
+          <td>42.6</td>
+          <td>47 km E of Oarai, Japan</td>
+          <td><a href="index_viewer.html?event=2011-03-11_06-15-40.280Z_mwc7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2011-03-11 05:46:24.120 UTC</td>
+          <td>9.1</td>
+          <td>38.30</td>
+          <td>142.37</td>
+          <td>29.0</td>
+          <td>2011 Great Tohoku Earthquake, Japan</td>
+          <td><a href="index_viewer.html?event=2011-03-11_05-46-24.120Z_mww9.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2011-03-09 02:45:20.330 UTC</td>
+          <td>7.3</td>
+          <td>38.44</td>
+          <td>142.84</td>
+          <td>32.0</td>
+          <td>120 km SE of Ofunato, Japan</td>
+          <td><a href="index_viewer.html?event=2011-03-09_02-45-20.330Z_mww7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-12-25 13:16:37.000 UTC</td>
+          <td>7.3</td>
+          <td>-19.70</td>
+          <td>167.95</td>
+          <td>16.0</td>
+          <td>141 km W of Isangel, Vanuatu</td>
+          <td><a href="index_viewer.html?event=2010-12-25_13-16-37.000Z_mwc7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-12-21 17:19:40.660 UTC</td>
+          <td>7.4</td>
+          <td>26.90</td>
+          <td>143.70</td>
+          <td>14.0</td>
+          <td>Bonin Islands, Japan region</td>
+          <td><a href="index_viewer.html?event=2010-12-21_17-19-40.660Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-10-25 14:42:22.460 UTC</td>
+          <td>7.8</td>
+          <td>-3.49</td>
+          <td>100.08</td>
+          <td>20.1</td>
+          <td>215 km SW of Sungai Penuh, Indonesia</td>
+          <td><a href="index_viewer.html?event=2010-10-25_14-42-22.460Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-07-23 23:15:10.190 UTC</td>
+          <td>7.5</td>
+          <td>6.78</td>
+          <td>123.26</td>
+          <td>640.6</td>
+          <td>72 km S of Panubigan, Philippines</td>
+          <td><a href="index_viewer.html?event=2010-07-23_23-15-10.190Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-07-23 22:51:11.840 UTC</td>
+          <td>7.6</td>
+          <td>6.50</td>
+          <td>123.48</td>
+          <td>578.0</td>
+          <td>61 km W of Bantogon, Philippines</td>
+          <td><a href="index_viewer.html?event=2010-07-23_22-51-11.840Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-07-23 22:08:11.250 UTC</td>
+          <td>7.3</td>
+          <td>6.72</td>
+          <td>123.41</td>
+          <td>607.1</td>
+          <td>68 km W of Gadung, Philippines</td>
+          <td><a href="index_viewer.html?event=2010-07-23_22-08-11.250Z_mwc7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-07-18 13:34:59.360 UTC</td>
+          <td>7.3</td>
+          <td>-5.93</td>
+          <td>150.59</td>
+          <td>35.0</td>
+          <td>New Britain region, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2010-07-18_13-34-59.360Z_mwc7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-06-12 19:26:50.460 UTC</td>
+          <td>7.5</td>
+          <td>7.88</td>
+          <td>91.94</td>
+          <td>35.0</td>
+          <td>Nicobar Islands, India region</td>
+          <td><a href="index_viewer.html?event=2010-06-12_19-26-50.460Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-04-06 22:15:01.580 UTC</td>
+          <td>7.8</td>
+          <td>2.38</td>
+          <td>97.05</td>
+          <td>31.0</td>
+          <td>75 km E of Sinabang, Indonesia</td>
+          <td><a href="index_viewer.html?event=2010-04-06_22-15-01.580Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-02-27 08:01:23.010 UTC</td>
+          <td>7.4</td>
+          <td>-37.77</td>
+          <td>-75.05</td>
+          <td>35.0</td>
+          <td>124 km W of Lebu, Chile</td>
+          <td><a href="index_viewer.html?event=2010-02-27_08-01-23.010Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2010-02-27 06:34:11.530 UTC</td>
+          <td>8.8</td>
+          <td>-36.12</td>
+          <td>-72.90</td>
+          <td>22.9</td>
+          <td>2010 Maule, Chile Earthquake</td>
+          <td><a href="index_viewer.html?event=2010-02-27_06-34-11.530Z_mww8.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-10-07 23:13:48.160 UTC</td>
+          <td>7.4</td>
+          <td>-13.09</td>
+          <td>166.50</td>
+          <td>31.1</td>
+          <td>143 km NW of Sola, Vanuatu</td>
+          <td><a href="index_viewer.html?event=2009-10-07_23-13-48.160Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-10-07 22:18:51.240 UTC</td>
+          <td>7.8</td>
+          <td>-12.52</td>
+          <td>166.38</td>
+          <td>35.0</td>
+          <td>196 km NW of Sola, Vanuatu</td>
+          <td><a href="index_viewer.html?event=2009-10-07_22-18-51.240Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-10-07 22:03:14.470 UTC</td>
+          <td>7.6</td>
+          <td>-13.01</td>
+          <td>166.51</td>
+          <td>45.0</td>
+          <td>148 km NW of Sola, Vanuatu</td>
+          <td><a href="index_viewer.html?event=2009-10-07_22-03-14.470Z_mww7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-09-30 10:16:09.250 UTC</td>
+          <td>7.6</td>
+          <td>-0.72</td>
+          <td>99.87</td>
+          <td>81.0</td>
+          <td>30 km WSW of Pariaman, Indonesia</td>
+          <td><a href="index_viewer.html?event=2009-09-30_10-16-09.250Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-09-29 17:48:10.990 UTC</td>
+          <td>8.1</td>
+          <td>-15.49</td>
+          <td>-172.09</td>
+          <td>18.0</td>
+          <td>2009 Samoa Earthquake</td>
+          <td><a href="index_viewer.html?event=2009-09-29_17-48-10.990Z_mwc8.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-08-10 19:55:38.730 UTC</td>
+          <td>7.5</td>
+          <td>14.10</td>
+          <td>92.90</td>
+          <td>24.0</td>
+          <td>266 km N of Bamboo Flat, India</td>
+          <td><a href="index_viewer.html?event=2009-08-10_19-55-38.730Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-07-15 09:22:29.030 UTC</td>
+          <td>7.8</td>
+          <td>-45.76</td>
+          <td>166.56</td>
+          <td>12.0</td>
+          <td>97 km WSW of Te Anau, New Zealand</td>
+          <td><a href="index_viewer.html?event=2009-07-15_09-22-29.030Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-05-28 08:24:46.560 UTC</td>
+          <td>7.3</td>
+          <td>16.73</td>
+          <td>-86.22</td>
+          <td>19.0</td>
+          <td>46 km NW of Guanaja, Honduras</td>
+          <td><a href="index_viewer.html?event=2009-05-28_08-24-46.560Z_mwc7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-03-19 18:17:40.470 UTC</td>
+          <td>7.6</td>
+          <td>-23.04</td>
+          <td>-174.66</td>
+          <td>31.0</td>
+          <td>191 km S of Ohonua, Tonga</td>
+          <td><a href="index_viewer.html?event=2009-03-19_18-17-40.470Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-01-15 17:49:39.070 UTC</td>
+          <td>7.4</td>
+          <td>46.86</td>
+          <td>155.15</td>
+          <td>36.0</td>
+          <td>east of the Kuril Islands</td>
+          <td><a href="index_viewer.html?event=2009-01-15_17-49-39.070Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-01-03 22:33:40.290 UTC</td>
+          <td>7.4</td>
+          <td>-0.69</td>
+          <td>133.31</td>
+          <td>23.0</td>
+          <td>86 km WNW of Manokwari, Indonesia</td>
+          <td><a href="index_viewer.html?event=2009-01-03_22-33-40.290Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2009-01-03 19:43:50.650 UTC</td>
+          <td>7.7</td>
+          <td>-0.41</td>
+          <td>132.88</td>
+          <td>17.0</td>
+          <td>140 km WNW of Manokwari, Indonesia</td>
+          <td><a href="index_viewer.html?event=2009-01-03_19-43-50.650Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2008-11-24 09:02:58.760 UTC</td>
+          <td>7.3</td>
+          <td>54.20</td>
+          <td>154.32</td>
+          <td>492.3</td>
+          <td>284 km WSW of Milkovo, Russia</td>
+          <td><a href="index_viewer.html?event=2008-11-24_09-02-58.760Z_mwc7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2008-11-16 17:02:32.700 UTC</td>
+          <td>7.3</td>
+          <td>1.27</td>
+          <td>122.09</td>
+          <td>30.0</td>
+          <td>135 km NW of Gorontalo, Indonesia</td>
+          <td><a href="index_viewer.html?event=2008-11-16_17-02-32.700Z_mww7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2008-07-05 02:12:04.480 UTC</td>
+          <td>7.7</td>
+          <td>53.88</td>
+          <td>152.89</td>
+          <td>632.8</td>
+          <td>Sea of Okhotsk</td>
+          <td><a href="index_viewer.html?event=2008-07-05_02-12-04.480Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2008-05-12 06:28:01.570 UTC</td>
+          <td>7.9</td>
+          <td>31.00</td>
+          <td>103.32</td>
+          <td>19.0</td>
+          <td>58 km W of Tianpeng, China</td>
+          <td><a href="index_viewer.html?event=2008-05-12_06-28-01.570Z_mwc7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2008-04-09 12:46:12.720 UTC</td>
+          <td>7.3</td>
+          <td>-20.07</td>
+          <td>168.89</td>
+          <td>33.0</td>
+          <td>71 km SW of Isangel, Vanuatu</td>
+          <td><a href="index_viewer.html?event=2008-04-09_12-46-12.720Z_mwc7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2008-02-20 08:08:30.520 UTC</td>
+          <td>7.3</td>
+          <td>2.77</td>
+          <td>95.96</td>
+          <td>26.0</td>
+          <td>56 km NW of Sinabang, Indonesia</td>
+          <td><a href="index_viewer.html?event=2008-02-20_08-08-30.520Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-12-09 07:28:20.820 UTC</td>
+          <td>7.8</td>
+          <td>-26.00</td>
+          <td>-177.51</td>
+          <td>152.5</td>
+          <td>south of the Fiji Islands</td>
+          <td><a href="index_viewer.html?event=2007-12-09_07-28-20.820Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-11-29 19:00:20.420 UTC</td>
+          <td>7.4</td>
+          <td>14.94</td>
+          <td>-61.27</td>
+          <td>156.0</td>
+          <td>18 km WNW of Basse-Pointe, Martinique</td>
+          <td><a href="index_viewer.html?event=2007-11-29_19-00-20.420Z_mwb7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-11-14 15:40:50.530 UTC</td>
+          <td>7.7</td>
+          <td>-22.25</td>
+          <td>-69.89</td>
+          <td>40.0</td>
+          <td>36 km ESE of Tocopilla, Chile</td>
+          <td><a href="index_viewer.html?event=2007-11-14_15-40-50.530Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-09-30 05:23:34.070 UTC</td>
+          <td>7.4</td>
+          <td>-49.27</td>
+          <td>164.12</td>
+          <td>10.0</td>
+          <td>Auckland Islands, New Zealand region</td>
+          <td><a href="index_viewer.html?event=2007-09-30_05-23-34.070Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-09-28 13:38:57.880 UTC</td>
+          <td>7.5</td>
+          <td>22.01</td>
+          <td>142.67</td>
+          <td>260.0</td>
+          <td>Volcano Islands, Japan region</td>
+          <td><a href="index_viewer.html?event=2007-09-28_13-38-57.880Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-09-12 23:49:03.720 UTC</td>
+          <td>7.9</td>
+          <td>-2.62</td>
+          <td>100.84</td>
+          <td>35.0</td>
+          <td>87 km SW of Sungai Penuh, Indonesia</td>
+          <td><a href="index_viewer.html?event=2007-09-12_23-49-03.720Z_mwc7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-09-12 11:10:26.830 UTC</td>
+          <td>8.5</td>
+          <td>-4.44</td>
+          <td>101.37</td>
+          <td>34.0</td>
+          <td>122 km SW of Bengkulu, Indonesia</td>
+          <td><a href="index_viewer.html?event=2007-09-12_11-10-26.830Z_mww8.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-08-15 23:40:57.890 UTC</td>
+          <td>8.0</td>
+          <td>-13.39</td>
+          <td>-76.60</td>
+          <td>39.0</td>
+          <td>41 km SW of San Vicente de Canete, Peru</td>
+          <td><a href="index_viewer.html?event=2007-08-15_23-40-57.890Z_mwc8.0">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-08-08 17:05:04.920 UTC</td>
+          <td>7.5</td>
+          <td>-5.86</td>
+          <td>107.42</td>
+          <td>280.0</td>
+          <td>35 km NNE of Rengasdengklok, Indonesia</td>
+          <td><a href="index_viewer.html?event=2007-08-08_17-05-04.920Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-04-01 20:39:58.710 UTC</td>
+          <td>8.1</td>
+          <td>-8.47</td>
+          <td>157.04</td>
+          <td>24.0</td>
+          <td>2007 Solomon Islands Earthquake</td>
+          <td><a href="index_viewer.html?event=2007-04-01_20-39-58.710Z_mwc8.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-01-21 11:27:45.060 UTC</td>
+          <td>7.5</td>
+          <td>1.06</td>
+          <td>126.28</td>
+          <td>22.0</td>
+          <td>126 km WNW of Ternate, Indonesia</td>
+          <td><a href="index_viewer.html?event=2007-01-21_11-27-45.060Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2007-01-13 04:23:21.160 UTC</td>
+          <td>8.1</td>
+          <td>46.24</td>
+          <td>154.52</td>
+          <td>10.0</td>
+          <td>2007 Kuril Islands Earthquake</td>
+          <td><a href="index_viewer.html?event=2007-01-13_04-23-21.160Z_mwc8.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2006-11-15 11:14:13.570 UTC</td>
+          <td>8.3</td>
+          <td>46.59</td>
+          <td>153.27</td>
+          <td>10.0</td>
+          <td>2006 Kuril Islands Earthquake</td>
+          <td><a href="index_viewer.html?event=2006-11-15_11-14-13.570Z_mwc8.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2006-07-17 08:19:26.680 UTC</td>
+          <td>7.7</td>
+          <td>-9.28</td>
+          <td>107.42</td>
+          <td>20.0</td>
+          <td>226 km SSW of Singaparna, Indonesia</td>
+          <td><a href="index_viewer.html?event=2006-07-17_08-19-26.680Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2006-05-16 10:39:23.340 UTC</td>
+          <td>7.4</td>
+          <td>-31.81</td>
+          <td>-179.31</td>
+          <td>152.0</td>
+          <td>Kermadec Islands region</td>
+          <td><a href="index_viewer.html?event=2006-05-16_10-39-23.340Z_mwb7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2006-05-03 15:26:40.290 UTC</td>
+          <td>8.0</td>
+          <td>-20.19</td>
+          <td>-174.12</td>
+          <td>55.0</td>
+          <td>2006 Tonga Earthquake</td>
+          <td><a href="index_viewer.html?event=2006-05-03_15-26-40.290Z_mwc8.0">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2006-04-20 23:25:02.150 UTC</td>
+          <td>7.6</td>
+          <td>60.95</td>
+          <td>167.09</td>
+          <td>22.0</td>
+          <td>80 km NE of Tilichiki, Russia</td>
+          <td><a href="index_viewer.html?event=2006-04-20_23-25-02.150Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2006-01-27 16:58:53.670 UTC</td>
+          <td>7.6</td>
+          <td>-5.47</td>
+          <td>128.13</td>
+          <td>397.0</td>
+          <td>196 km S of Ambon, Indonesia</td>
+          <td><a href="index_viewer.html?event=2006-01-27_16-58-53.670Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2006-01-02 06:10:49.760 UTC</td>
+          <td>7.4</td>
+          <td>-60.96</td>
+          <td>-21.61</td>
+          <td>13.0</td>
+          <td>east of the South Sandwich Islands</td>
+          <td><a href="index_viewer.html?event=2006-01-02_06-10-49.760Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2005-10-08 03:50:40.800 UTC</td>
+          <td>7.6</td>
+          <td>34.54</td>
+          <td>73.59</td>
+          <td>26.0</td>
+          <td>21 km NNE of Muzaffarabad, Pakistan</td>
+          <td><a href="index_viewer.html?event=2005-10-08_03-50-40.800Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2005-09-26 01:55:37.670 UTC</td>
+          <td>7.5</td>
+          <td>-5.68</td>
+          <td>-76.40</td>
+          <td>115.0</td>
+          <td>39 km NW of Yurimaguas, Peru</td>
+          <td><a href="index_viewer.html?event=2005-09-26_01-55-37.670Z_mwb7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2005-09-09 07:26:43.730 UTC</td>
+          <td>7.6</td>
+          <td>-4.54</td>
+          <td>153.47</td>
+          <td>90.0</td>
+          <td>135 km E of Kokopo, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2005-09-09_07-26-43.730Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2005-06-13 22:44:33.900 UTC</td>
+          <td>7.8</td>
+          <td>-19.99</td>
+          <td>-69.20</td>
+          <td>115.6</td>
+          <td>102 km ENE of Iquique, Chile</td>
+          <td><a href="index_viewer.html?event=2005-06-13_22-44-33.900Z_mwb7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2005-03-28 16:09:36.530 UTC</td>
+          <td>8.6</td>
+          <td>2.08</td>
+          <td>97.11</td>
+          <td>30.0</td>
+          <td>78 km WSW of Singkil, Indonesia</td>
+          <td><a href="index_viewer.html?event=2005-03-28_16-09-36.530Z_mww8.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2004-12-26 00:58:53.450 UTC</td>
+          <td>9.0</td>
+          <td>3.29</td>
+          <td>95.98</td>
+          <td>30.0</td>
+          <td>2004 Sumatra - Andaman Islands Earthquake</td>
+          <td><a href="index_viewer.html?event=2004-12-26_00-58-53.450Z_mw9.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2004-12-23 14:59:04.410 UTC</td>
+          <td>8.1</td>
+          <td>-49.31</td>
+          <td>161.34</td>
+          <td>10.0</td>
+          <td>2004 Tasman Sea Earthquake</td>
+          <td><a href="index_viewer.html?event=2004-12-23_14-59-04.410Z_mwc8.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2004-11-11 21:26:41.150 UTC</td>
+          <td>7.5</td>
+          <td>-8.15</td>
+          <td>124.87</td>
+          <td>10.0</td>
+          <td>63 km NW of Maubara, Timor Leste</td>
+          <td><a href="index_viewer.html?event=2004-11-11_21-26-41.150Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2004-09-05 14:57:18.610 UTC</td>
+          <td>7.4</td>
+          <td>33.18</td>
+          <td>137.07</td>
+          <td>10.0</td>
+          <td>118 km ESE of Shingu, Japan</td>
+          <td><a href="index_viewer.html?event=2004-09-05_14-57-18.610Z_mwb7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2003-11-17 06:43:06.800 UTC</td>
+          <td>7.8</td>
+          <td>51.15</td>
+          <td>178.65</td>
+          <td>33.0</td>
+          <td>Rat Islands, Aleutian Islands, Alaska</td>
+          <td><a href="index_viewer.html?event=2003-11-17_06-43-06.800Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2003-09-25 21:08:00.030 UTC</td>
+          <td>7.3</td>
+          <td>41.77</td>
+          <td>143.59</td>
+          <td>33.0</td>
+          <td>119 km ESE of Shizunai-furukawacho, Japan</td>
+          <td><a href="index_viewer.html?event=2003-09-25_21-08-00.030Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2003-09-25 19:50:06.360 UTC</td>
+          <td>8.3</td>
+          <td>41.81</td>
+          <td>143.91</td>
+          <td>27.0</td>
+          <td>2003 Tokachi-Oki Earthquake</td>
+          <td><a href="index_viewer.html?event=2003-09-25_19-50-06.360Z_mww8.2">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2003-08-04 04:37:20.130 UTC</td>
+          <td>7.6</td>
+          <td>-60.53</td>
+          <td>-43.41</td>
+          <td>10.0</td>
+          <td>Scotia Sea</td>
+          <td><a href="index_viewer.html?event=2003-08-04_04-37-20.130Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2003-07-15 20:27:50.530 UTC</td>
+          <td>7.5</td>
+          <td>-2.60</td>
+          <td>68.38</td>
+          <td>10.0</td>
+          <td>Carlsberg Ridge</td>
+          <td><a href="index_viewer.html?event=2003-07-15_20-27-50.530Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2003-01-22 02:06:34.610 UTC</td>
+          <td>7.5</td>
+          <td>18.77</td>
+          <td>-104.10</td>
+          <td>24.0</td>
+          <td>16 km SSW of Cuyutlan, Mexico</td>
+          <td><a href="index_viewer.html?event=2003-01-22_02-06-34.610Z_mwb7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2002-11-03 22:12:41.518 UTC</td>
+          <td>7.8</td>
+          <td>63.51</td>
+          <td>-147.45</td>
+          <td>4.2</td>
+          <td>2002 Denali Fault, Alaska Earthquake</td>
+          <td><a href="index_viewer.html?event=2002-11-03_22-12-41.518Z_mw7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2002-10-10 10:50:20.570 UTC</td>
+          <td>7.5</td>
+          <td>-1.76</td>
+          <td>134.30</td>
+          <td>10.0</td>
+          <td>102 km SSE of Manokwari, Indonesia</td>
+          <td><a href="index_viewer.html?event=2002-10-10_10-50-20.570Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2002-09-08 18:44:23.710 UTC</td>
+          <td>7.6</td>
+          <td>-3.30</td>
+          <td>142.94</td>
+          <td>13.0</td>
+          <td>68 km ESE of Aitape, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2002-09-08_18-44-23.710Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2002-08-19 11:08:24.310 UTC</td>
+          <td>7.7</td>
+          <td>-23.88</td>
+          <td>178.50</td>
+          <td>675.4</td>
+          <td>south of the Fiji Islands</td>
+          <td><a href="index_viewer.html?event=2002-08-19_11-08-24.310Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2002-08-19 11:01:01.190 UTC</td>
+          <td>7.6</td>
+          <td>-21.70</td>
+          <td>-179.51</td>
+          <td>580.0</td>
+          <td>Fiji region</td>
+          <td><a href="index_viewer.html?event=2002-08-19_11-01-01.190Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2002-06-28 17:19:30.270 UTC</td>
+          <td>7.3</td>
+          <td>43.75</td>
+          <td>130.67</td>
+          <td>566.0</td>
+          <td>50 km SW of Dongning, China</td>
+          <td><a href="index_viewer.html?event=2002-06-28_17-19-30.270Z_mwc7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2002-03-05 21:16:09.130 UTC</td>
+          <td>7.5</td>
+          <td>6.03</td>
+          <td>124.25</td>
+          <td>31.0</td>
+          <td>Mindanao, Philippines</td>
+          <td><a href="index_viewer.html?event=2002-03-05_21-16-09.130Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2002-03-03 12:08:19.740 UTC</td>
+          <td>7.3</td>
+          <td>36.50</td>
+          <td>70.48</td>
+          <td>225.6</td>
+          <td>51 km SW of Jurm, Afghanistan</td>
+          <td><a href="index_viewer.html?event=2002-03-03_12-08-19.740Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2001-11-14 09:26:10.010 UTC</td>
+          <td>7.8</td>
+          <td>35.95</td>
+          <td>90.54</td>
+          <td>10.0</td>
+          <td>Southern Qinghai, China</td>
+          <td><a href="index_viewer.html?event=2001-11-14_09-26-10.010Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2001-10-19 03:28:44.460 UTC</td>
+          <td>7.5</td>
+          <td>-4.10</td>
+          <td>123.91</td>
+          <td>33.0</td>
+          <td>155 km E of Kendari, Indonesia</td>
+          <td><a href="index_viewer.html?event=2001-10-19_03-28-44.460Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2001-07-07 09:38:43.520 UTC</td>
+          <td>7.6</td>
+          <td>-17.54</td>
+          <td>-72.08</td>
+          <td>33.0</td>
+          <td>51 km SW of Punta de Bombon, Peru</td>
+          <td><a href="index_viewer.html?event=2001-07-07_09-38-43.520Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2001-06-23 20:33:14.130 UTC</td>
+          <td>8.4</td>
+          <td>-16.27</td>
+          <td>-73.64</td>
+          <td>33.0</td>
+          <td>6 km SSW of Atico, Peru</td>
+          <td><a href="index_viewer.html?event=2001-06-23_20-33-14.130Z_mww8.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2001-02-13 19:28:30.260 UTC</td>
+          <td>7.3</td>
+          <td>-4.68</td>
+          <td>102.56</td>
+          <td>36.0</td>
+          <td>102 km SSE of Bengkulu, Indonesia</td>
+          <td><a href="index_viewer.html?event=2001-02-13_19-28-30.260Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2001-01-26 03:16:40.500 UTC</td>
+          <td>7.6</td>
+          <td>23.42</td>
+          <td>70.23</td>
+          <td>16.0</td>
+          <td>17 km NW of Bhachau, India</td>
+          <td><a href="index_viewer.html?event=2001-01-26_03-16-40.500Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2001-01-13 17:33:32.380 UTC</td>
+          <td>7.7</td>
+          <td>13.05</td>
+          <td>-88.66</td>
+          <td>60.0</td>
+          <td>28 km SSW of Puerto El Triunfo, El Salvador</td>
+          <td><a href="index_viewer.html?event=2001-01-13_17-33-32.380Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2001-01-01 06:57:04.170 UTC</td>
+          <td>7.4</td>
+          <td>6.90</td>
+          <td>126.58</td>
+          <td>33.0</td>
+          <td>21 km SE of Lukatan, Philippines</td>
+          <td><a href="index_viewer.html?event=2001-01-01_06-57-04.170Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2000-11-17 21:01:56.490 UTC</td>
+          <td>7.8</td>
+          <td>-5.50</td>
+          <td>151.78</td>
+          <td>33.0</td>
+          <td>138 km SSW of Kokopo, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2000-11-17_21-01-56.490Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2000-11-16 07:42:16.930 UTC</td>
+          <td>7.8</td>
+          <td>-5.23</td>
+          <td>153.10</td>
+          <td>30.0</td>
+          <td>135 km SE of Kokopo, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=2000-11-16_07-42-16.930Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2000-11-16 04:54:56.740 UTC</td>
+          <td>8.0</td>
+          <td>-3.98</td>
+          <td>152.17</td>
+          <td>33.0</td>
+          <td>2000 New Ireland Earthquake</td>
+          <td><a href="index_viewer.html?event=2000-11-16_04-54-56.740Z_mwc8.0">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2000-08-06 07:27:12.900 UTC</td>
+          <td>7.3</td>
+          <td>28.86</td>
+          <td>139.56</td>
+          <td>394.8</td>
+          <td>Bonin Islands, Japan region</td>
+          <td><a href="index_viewer.html?event=2000-08-06_07-27-12.900Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2000-06-18 14:44:13.310 UTC</td>
+          <td>7.9</td>
+          <td>-13.80</td>
+          <td>97.45</td>
+          <td>10.0</td>
+          <td>South Indian Ocean</td>
+          <td><a href="index_viewer.html?event=2000-06-18_14-44-13.310Z_mwc7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2000-06-04 16:28:26.170 UTC</td>
+          <td>7.8</td>
+          <td>-4.72</td>
+          <td>102.09</td>
+          <td>33.0</td>
+          <td>103 km S of Bengkulu, Indonesia</td>
+          <td><a href="index_viewer.html?event=2000-06-04_16-28-26.170Z_mwc7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2000-05-04 04:21:16.210 UTC</td>
+          <td>7.5</td>
+          <td>-1.10</td>
+          <td>123.57</td>
+          <td>26.0</td>
+          <td>89 km E of Luwuk, Indonesia</td>
+          <td><a href="index_viewer.html?event=2000-05-04_04-21-16.210Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>2000-03-28 11:00:22.510 UTC</td>
+          <td>7.6</td>
+          <td>22.34</td>
+          <td>143.73</td>
+          <td>126.5</td>
+          <td>Volcano Islands, Japan region</td>
+          <td><a href="index_viewer.html?event=2000-03-28_11-00-22.510Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1999-11-26 13:21:15.570 UTC</td>
+          <td>7.4</td>
+          <td>-16.42</td>
+          <td>168.21</td>
+          <td>33.0</td>
+          <td>92 km ESE of Lakatoro, Vanuatu</td>
+          <td><a href="index_viewer.html?event=1999-11-26_13-21-15.570Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1999-09-30 16:31:15.690 UTC</td>
+          <td>7.4</td>
+          <td>16.06</td>
+          <td>-96.93</td>
+          <td>60.6</td>
+          <td>15 km W of San Baltazar Loxicha, Mexico</td>
+          <td><a href="index_viewer.html?event=1999-09-30_16-31-15.690Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1999-09-20 17:47:18.490 UTC</td>
+          <td>7.6</td>
+          <td>23.77</td>
+          <td>120.98</td>
+          <td>33.0</td>
+          <td>21 km S of Puli, Taiwan</td>
+          <td><a href="index_viewer.html?event=1999-09-20_17-47-18.490Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1999-08-17 00:01:39.130 UTC</td>
+          <td>7.6</td>
+          <td>40.75</td>
+          <td>29.86</td>
+          <td>17.0</td>
+          <td>4 km ESE of Derince, Turkey</td>
+          <td><a href="index_viewer.html?event=1999-08-17_00-01-39.130Z_mwc7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1999-04-05 11:08:04.000 UTC</td>
+          <td>7.4</td>
+          <td>-5.59</td>
+          <td>149.57</td>
+          <td>150.0</td>
+          <td>63 km W of Kimbe, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=1999-04-05_11-08-04.000Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1999-02-06 21:47:59.470 UTC</td>
+          <td>7.3</td>
+          <td>-12.85</td>
+          <td>166.70</td>
+          <td>90.1</td>
+          <td>146 km NW of Sola, Vanuatu</td>
+          <td><a href="index_viewer.html?event=1999-02-06_21-47-59.470Z_mwc7.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1998-11-29 14:10:31.960 UTC</td>
+          <td>7.7</td>
+          <td>-2.07</td>
+          <td>124.89</td>
+          <td>33.0</td>
+          <td>264 km ESE of Luwuk, Indonesia</td>
+          <td><a href="index_viewer.html?event=1998-11-29_14-10-31.960Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1998-05-03 23:30:21.910 UTC</td>
+          <td>7.4</td>
+          <td>22.31</td>
+          <td>125.31</td>
+          <td>33.0</td>
+          <td>254 km SSE of Ishigaki, Japan</td>
+          <td><a href="index_viewer.html?event=1998-05-03_23-30-21.910Z_mwb7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1998-03-25 03:12:25.070 UTC</td>
+          <td>8.1</td>
+          <td>-62.88</td>
+          <td>149.53</td>
+          <td>10.0</td>
+          <td>1998 Balleny Islands Earthquake</td>
+          <td><a href="index_viewer.html?event=1998-03-25_03-12-25.070Z_mwc8.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1998-01-04 06:11:58.970 UTC</td>
+          <td>7.4</td>
+          <td>-22.30</td>
+          <td>170.91</td>
+          <td>100.6</td>
+          <td>southeast of the Loyalty Islands</td>
+          <td><a href="index_viewer.html?event=1998-01-04_06-11-58.970Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1997-12-05 11:26:54.690 UTC</td>
+          <td>7.8</td>
+          <td>54.84</td>
+          <td>162.03</td>
+          <td>33.0</td>
+          <td>156 km S of Ust-Kamchatsk Staryy, Russia</td>
+          <td><a href="index_viewer.html?event=1997-12-05_11-26-54.690Z_mwc7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1997-11-08 10:02:52.610 UTC</td>
+          <td>7.5</td>
+          <td>35.07</td>
+          <td>87.33</td>
+          <td>33.0</td>
+          <td>western Xizang</td>
+          <td><a href="index_viewer.html?event=1997-11-08_10-02-52.610Z_mwc7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1997-10-14 09:53:18.150 UTC</td>
+          <td>7.7</td>
+          <td>-22.10</td>
+          <td>-176.77</td>
+          <td>167.3</td>
+          <td>192 km WSW of Haveluloto, Tonga</td>
+          <td><a href="index_viewer.html?event=1997-10-14_09-53-18.150Z_mwb7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1997-04-21 12:02:26.430 UTC</td>
+          <td>7.7</td>
+          <td>-12.58</td>
+          <td>166.68</td>
+          <td>33.0</td>
+          <td>171 km NNW of Sola, Vanuatu</td>
+          <td><a href="index_viewer.html?event=1997-04-21_12-02-26.430Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1996-11-12 16:59:44.030 UTC</td>
+          <td>7.7</td>
+          <td>-14.99</td>
+          <td>-75.67</td>
+          <td>33.0</td>
+          <td>60 km SW of Changuillo, Peru</td>
+          <td><a href="index_viewer.html?event=1996-11-12_16-59-44.030Z_mwc7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1996-08-05 22:38:22.090 UTC</td>
+          <td>7.4</td>
+          <td>-20.69</td>
+          <td>-178.31</td>
+          <td>550.2</td>
+          <td>Fiji region</td>
+          <td><a href="index_viewer.html?event=1996-08-05_22-38-22.090Z_mwc7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1996-06-17 11:22:18.540 UTC</td>
+          <td>7.8</td>
+          <td>-7.14</td>
+          <td>122.59</td>
+          <td>587.3</td>
+          <td>169 km NNE of Maumere, Indonesia</td>
+          <td><a href="index_viewer.html?event=1996-06-17_11-22-18.540Z_mwc7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1996-06-10 04:03:35.480 UTC</td>
+          <td>7.9</td>
+          <td>51.56</td>
+          <td>-177.63</td>
+          <td>33.0</td>
+          <td>77 km WSW of Adak, Alaska</td>
+          <td><a href="index_viewer.html?event=1996-06-10_04-03-35.480Z_mwc7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1996-02-21 12:51:01.300 UTC</td>
+          <td>7.5</td>
+          <td>-9.59</td>
+          <td>-79.59</td>
+          <td>10.0</td>
+          <td>123 km WSW of Puerto Santa, Peru</td>
+          <td><a href="index_viewer.html?event=1996-02-21_12-51-01.300Z_mw7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1996-02-17 05:59:30.550 UTC</td>
+          <td>8.2</td>
+          <td>-0.89</td>
+          <td>136.95</td>
+          <td>33.0</td>
+          <td>1996 Biak, Indonesia Earthquake</td>
+          <td><a href="index_viewer.html?event=1996-02-17_05-59-30.550Z_mww8.1">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1996-01-01 08:05:10.830 UTC</td>
+          <td>7.9</td>
+          <td>0.73</td>
+          <td>119.93</td>
+          <td>24.0</td>
+          <td>181 km N of Palu, Indonesia</td>
+          <td><a href="index_viewer.html?event=1996-01-01_08-05-10.830Z_mw7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1995-12-03 18:01:08.990 UTC</td>
+          <td>7.9</td>
+          <td>44.66</td>
+          <td>149.30</td>
+          <td>33.0</td>
+          <td>128 km ESE of Kurilsk, Russia</td>
+          <td><a href="index_viewer.html?event=1995-12-03_18-01-08.990Z_mw7.9">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1995-10-09 15:35:53.910 UTC</td>
+          <td>8.0</td>
+          <td>19.05</td>
+          <td>-104.20</td>
+          <td>33.0</td>
+          <td>1995 Colima-Jalisco, Mexico Earthquake</td>
+          <td><a href="index_viewer.html?event=1995-10-09_15-35-53.910Z_mw8.0">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1995-09-14 14:04:31.430 UTC</td>
+          <td>7.3</td>
+          <td>16.78</td>
+          <td>-98.60</td>
+          <td>23.0</td>
+          <td>5 km N of Azoyu, Mexico</td>
+          <td><a href="index_viewer.html?event=1995-09-14_14-04-31.430Z_mwb7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1995-08-16 10:27:28.630 UTC</td>
+          <td>7.7</td>
+          <td>-5.80</td>
+          <td>154.18</td>
+          <td>30.1</td>
+          <td>155 km WNW of Panguna, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=1995-08-16_10-27-28.630Z_mw7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1995-07-30 05:11:23.630 UTC</td>
+          <td>8.0</td>
+          <td>-23.34</td>
+          <td>-70.29</td>
+          <td>45.6</td>
+          <td>36 km NNE of Antofagasta, Chile</td>
+          <td><a href="index_viewer.html?event=1995-07-30_05-11-23.630Z_mw8.0">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1995-05-16 20:12:44.220 UTC</td>
+          <td>7.7</td>
+          <td>-23.01</td>
+          <td>169.90</td>
+          <td>20.2</td>
+          <td>249 km E of Vao, New Caledonia</td>
+          <td><a href="index_viewer.html?event=1995-05-16_20-12-44.220Z_mw7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1995-04-07 22:06:56.890 UTC</td>
+          <td>7.3</td>
+          <td>-15.20</td>
+          <td>-173.53</td>
+          <td>21.2</td>
+          <td>88 km NNE of Hihifo, Tonga</td>
+          <td><a href="index_viewer.html?event=1995-04-07_22-06-56.890Z_mw7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1994-12-28 12:19:23.030 UTC</td>
+          <td>7.7</td>
+          <td>40.52</td>
+          <td>143.42</td>
+          <td>26.5</td>
+          <td>off the east coast of Honshu, Japan</td>
+          <td><a href="index_viewer.html?event=1994-12-28_12-19-23.030Z_mw7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1994-10-04 13:22:55.840 UTC</td>
+          <td>8.2</td>
+          <td>43.77</td>
+          <td>147.32</td>
+          <td>14.0</td>
+          <td>48 km E of Shikotan, Russia</td>
+          <td><a href="index_viewer.html?event=1994-10-04_13-22-55.840Z_mw8.3">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1994-06-09 00:33:16.230 UTC</td>
+          <td>8.2</td>
+          <td>-13.84</td>
+          <td>-67.55</td>
+          <td>631.3</td>
+          <td>55 km NNW of Reyes, Bolivia</td>
+          <td><a href="index_viewer.html?event=1994-06-09_00-33-16.230Z_mw8.2">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1994-06-02 18:17:34.020 UTC</td>
+          <td>7.8</td>
+          <td>-10.48</td>
+          <td>112.83</td>
+          <td>18.4</td>
+          <td>249 km SSW of Kencong, Indonesia</td>
+          <td><a href="index_viewer.html?event=1994-06-02_18-17-34.020Z_mw7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1994-03-09 23:28:06.780 UTC</td>
+          <td>7.6</td>
+          <td>-18.04</td>
+          <td>-178.41</td>
+          <td>562.5</td>
+          <td>240 km E of Levuka, Fiji</td>
+          <td><a href="index_viewer.html?event=1994-03-09_23-28-06.780Z_mw7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1993-08-08 08:34:24.930 UTC</td>
+          <td>7.7</td>
+          <td>12.98</td>
+          <td>144.80</td>
+          <td>59.3</td>
+          <td>32 km S of Inarajan Village, Guam</td>
+          <td><a href="index_viewer.html?event=1993-08-08_08-34-24.930Z_mw7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1993-07-12 13:17:11.960 UTC</td>
+          <td>7.7</td>
+          <td>42.85</td>
+          <td>139.20</td>
+          <td>16.7</td>
+          <td>107 km W of Iwanai, Japan</td>
+          <td><a href="index_viewer.html?event=1993-07-12_13-17-11.960Z_mw7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1993-06-08 13:03:36.480 UTC</td>
+          <td>7.5</td>
+          <td>51.22</td>
+          <td>157.83</td>
+          <td>70.6</td>
+          <td>97 km ESE of Ozernovskiy, Russia</td>
+          <td><a href="index_viewer.html?event=1993-06-08_13-03-36.480Z_mw7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1993-01-15 11:06:05.950 UTC</td>
+          <td>7.6</td>
+          <td>43.30</td>
+          <td>143.69</td>
+          <td>102.2</td>
+          <td>52 km NE of Otofuke, Japan</td>
+          <td><a href="index_viewer.html?event=1993-01-15_11-06-05.950Z_mw7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1992-12-12 05:29:26.350 UTC</td>
+          <td>7.7</td>
+          <td>-8.48</td>
+          <td>121.90</td>
+          <td>27.7</td>
+          <td>37 km WNW of Maumere, Indonesia</td>
+          <td><a href="index_viewer.html?event=1992-12-12_05-29-26.350Z_mw7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1992-10-11 19:24:26.290 UTC</td>
+          <td>7.4</td>
+          <td>-19.25</td>
+          <td>168.95</td>
+          <td>129.0</td>
+          <td>47 km NW of Isangel, Vanuatu</td>
+          <td><a href="index_viewer.html?event=1992-10-11_19-24-26.290Z_mw7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1992-09-02 00:16:01.690 UTC</td>
+          <td>7.6</td>
+          <td>11.74</td>
+          <td>-87.34</td>
+          <td>44.8</td>
+          <td>83 km SSW of Corinto, Nicaragua</td>
+          <td><a href="index_viewer.html?event=1992-09-02_00-16-01.690Z_mw7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1991-12-22 08:43:13.410 UTC</td>
+          <td>7.6</td>
+          <td>45.53</td>
+          <td>151.02</td>
+          <td>24.7</td>
+          <td>248 km E of Kurilsk, Russia</td>
+          <td><a href="index_viewer.html?event=1991-12-22_08-43-13.410Z_mw7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1991-06-20 05:18:52.510 UTC</td>
+          <td>7.5</td>
+          <td>1.20</td>
+          <td>122.79</td>
+          <td>31.4</td>
+          <td>79 km NNW of Gorontalo, Indonesia</td>
+          <td><a href="index_viewer.html?event=1991-06-20_05-18-52.510Z_mw7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1991-04-22 21:56:51.820 UTC</td>
+          <td>7.6</td>
+          <td>9.69</td>
+          <td>-83.07</td>
+          <td>10.0</td>
+          <td>34 km S of Limon, Costa Rica</td>
+          <td><a href="index_viewer.html?event=1991-04-22_21-56-51.820Z_mw7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1990-12-30 19:14:18.930 UTC</td>
+          <td>7.4</td>
+          <td>-5.10</td>
+          <td>150.97</td>
+          <td>178.6</td>
+          <td>104 km ENE of Kimbe, Papua New Guinea</td>
+          <td><a href="index_viewer.html?event=1990-12-30_19-14-18.930Z_mw7.5">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1990-07-16 07:26:34.610 UTC</td>
+          <td>7.7</td>
+          <td>15.68</td>
+          <td>121.17</td>
+          <td>25.1</td>
+          <td>4 km E of Macapsing, Philippines</td>
+          <td><a href="index_viewer.html?event=1990-07-16_07-26-34.610Z_mw7.7">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1990-06-20 21:00:09.980 UTC</td>
+          <td>7.3</td>
+          <td>36.96</td>
+          <td>49.41</td>
+          <td>18.5</td>
+          <td>23 km N of Padegan-e Manjil, Iran</td>
+          <td><a href="index_viewer.html?event=1990-06-20_21-00-09.980Z_mw7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1990-04-18 13:39:19.010 UTC</td>
+          <td>7.6</td>
+          <td>1.19</td>
+          <td>122.86</td>
+          <td>25.7</td>
+          <td>75 km NNW of Gorontalo, Indonesia</td>
+          <td><a href="index_viewer.html?event=1990-04-18_13-39-19.010Z_mw7.8">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1990-04-05 21:12:35.550 UTC</td>
+          <td>7.4</td>
+          <td>15.12</td>
+          <td>147.60</td>
+          <td>11.4</td>
+          <td>198 km E of Saipan, Northern Mariana Islands</td>
+          <td><a href="index_viewer.html?event=1990-04-05_21-12-35.550Z_mw7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1990-03-03 12:16:27.960 UTC</td>
+          <td>7.6</td>
+          <td>-22.12</td>
+          <td>175.16</td>
+          <td>33.2</td>
+          <td>south of the Fiji Islands</td>
+          <td><a href="index_viewer.html?event=1990-03-03_12-16-27.960Z_mw7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1989-12-15 18:43:45.030 UTC</td>
+          <td>7.5</td>
+          <td>8.34</td>
+          <td>126.73</td>
+          <td>24.4</td>
+          <td>37 km ENE of Barcelona, Philippines</td>
+          <td><a href="index_viewer.html?event=1989-12-15_18-43-45.030Z_mw7.6">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1989-11-01 18:25:34.940 UTC</td>
+          <td>7.4</td>
+          <td>39.84</td>
+          <td>142.76</td>
+          <td>28.6</td>
+          <td>73 km ENE of Miyako, Japan</td>
+          <td><a href="index_viewer.html?event=1989-11-01_18-25-34.940Z_mw7.4">View AMRF</a></td>
+        </tr>
+        <tr>
+          <td>1988-03-06 22:35:38.140 UTC</td>
+          <td>7.7</td>
+          <td>56.95</td>
+          <td>-143.03</td>
+          <td>10.0</td>
+          <td>Gulf of Alaska</td>
+          <td><a href="index_viewer.html?event=1988-03-06_22-35-38.140Z_mw7.8">View AMRF</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>Keisuke Yoshida, Tohoku University</p>
+    <p>
+      Waveform data and station metadata were obtained through the
+      <a href="https://service.earthscope.org/">EarthScope Consortium
+      NSF SAGE Facility</a> (formerly the IRIS Data Management Center)
+      and were contributed by the relevant
+      <a href="https://www.fdsn.org/networks/">FDSN seismic networks</a>.
+      Event information was obtained from the
+      <a href="https://www.usgs.gov/programs/earthquake-hazards/anss-comprehensive-earthquake-catalog-comcat-documentation">USGS ANSS Comprehensive Earthquake Catalog</a>.
+      Centroid moment tensor solutions are from the
+      <a href="https://www.globalcmt.org/">Global CMT Project</a>.
+      Synthetic Green's functions were calculated using
+      <a href="https://ds.iris.edu/ds/products/syngine/">Syngine</a>.
+    </p>
+  </footer>
+</body>
+</html>

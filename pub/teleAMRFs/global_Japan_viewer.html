@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>global Japan-region AMRF viewer</title>
+  <style>
+    body { margin: 0; color: #202124; font-family: Arial, Helvetica, sans-serif; }
+    header { padding: 0.8rem 1rem; border-bottom: 1px solid #ccc; }
+    .navigation { display: flex; gap: 0.7rem; align-items: center; flex-wrap: wrap; }
+    .navigation a { color: #075aa8; }
+    .event-info { margin: 0.6rem 0 0; }
+    .region { color: #555; }
+    .pdf-area {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: calc(100vh - 8rem);
+      height: calc(100dvh - 8rem);
+      background: #d0d0d0;
+      box-sizing: border-box;
+      overflow: auto;
+      padding: 0.5rem;
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: white;
+    }
+    .preview-link {
+      display: none;
+      /* The full-size wrapper controls layout, but only the image is clickable. */
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .preview-image {
+      display: block;
+      pointer-events: auto;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      background: white;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    }
+    .preview-error {
+      display: none;
+      margin: 2rem;
+      padding: 1rem;
+      background: white;
+      text-align: center;
+    }
+    .disabled { color: #999; pointer-events: none; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navigation">
+      <a href="global_Japan.html">Back to index</a>
+      <a id="newer" href="#">&larr; Newer event</a>
+      <a id="older" href="#">Older event &rarr;</a>
+      <a id="direct-pdf" href="#">Open PDF directly</a>
+    </nav>
+    <p class="event-info">
+      <strong id="event-title"></strong><br>
+      <span id="event-region" class="region"></span>
+    </p>
+  </header>
+  <div class="pdf-area">
+    <a id="preview-link" class="preview-link" href="#">
+      <img id="preview-image" class="preview-image" alt="AMRF result">
+    </a>
+    <iframe id="pdf-frame" title="AMRF PDF"></iframe>
+    <p id="preview-error" class="preview-error">
+      The image preview could not be loaded.
+      Please use &ldquo;Open PDF directly&rdquo; above.
+    </p>
+  </div>
+
+  <script>
+    const events = [{"event": "2026-04-20_07-52-58.908Z_mww7.4", "time": "2026-04-20 07:52:58.908 UTC", "magnitude": "7.5", "description": "102 km ENE of Miyako, Japan", "pdf": "pdf/wave-AMRF_global_2026-04-20_07-52-58.908Z_mww7.4_0.2Hz.pdf?v=1b8b7c13a0faa6fc", "preview": "preview/wave-AMRF_global_2026-04-20_07-52-58.908Z_mww7.4_0.2Hz.jpg?v=1b8b7c13a0faa6fc"}, {"event": "2025-12-08_14-15-09.896Z_mww7.6", "time": "2025-12-08 14:15:09.896 UTC", "magnitude": "7.6", "description": "2025 Aomori Prefecture, Japan Earthquake", "pdf": "pdf/wave-AMRF_global_2025-12-08_14-15-09.896Z_mww7.6_0.2Hz.pdf?v=4f7c420e6ac8a30d", "preview": "preview/wave-AMRF_global_2025-12-08_14-15-09.896Z_mww7.6_0.2Hz.jpg?v=4f7c420e6ac8a30d"}, {"event": "2024-01-01_07-10-09.476Z_mww7.5", "time": "2024-01-01 07:10:09.476 UTC", "magnitude": "7.5", "description": "2024 Noto Peninsula, Japan Earthquake", "pdf": "pdf/wave-AMRF_global_2024-01-01_07-10-09.476Z_mww7.5_0.2Hz.pdf?v=cbab4b6526a8a612", "preview": "preview/wave-AMRF_global_2024-01-01_07-10-09.476Z_mww7.5_0.2Hz.jpg?v=cbab4b6526a8a612"}, {"event": "2022-03-16_14-36-30.997Z_mww7.3", "time": "2022-03-16 14:36:30.997 UTC", "magnitude": "7.3", "description": "57 km ENE of Namie, Japan", "pdf": "pdf/wave-AMRF_global_2022-03-16_14-36-30.997Z_mww7.3_0.2Hz.pdf?v=9d1b40220dd99f00", "preview": "preview/wave-AMRF_global_2022-03-16_14-36-30.997Z_mww7.3_0.2Hz.jpg?v=9d1b40220dd99f00"}, {"event": "2015-05-30_11-23-02.110Z_mww7.8", "time": "2015-05-30 11:23:02.110 UTC", "magnitude": "7.9", "description": "Bonin Islands, Japan region", "pdf": "pdf/wave-AMRF_global_2015-05-30_11-23-02.110Z_mww7.8_0.2Hz.pdf?v=84056a6fff2772b4", "preview": "preview/wave-AMRF_global_2015-05-30_11-23-02.110Z_mww7.8_0.2Hz.jpg?v=84056a6fff2772b4"}, {"event": "2011-03-11_06-25-50.300Z_mwc7.7", "time": "2011-03-11 06:25:50.300 UTC", "magnitude": "7.6", "description": "272 km ESE of Kamaishi, Japan", "pdf": "pdf/wave-AMRF_global_2011-03-11_06-25-50.300Z_mwc7.7_0.2Hz.pdf?v=3a90c2ca425bf17b", "preview": "preview/wave-AMRF_global_2011-03-11_06-25-50.300Z_mwc7.7_0.2Hz.jpg?v=3a90c2ca425bf17b"}, {"event": "2011-03-11_06-15-40.280Z_mwc7.9", "time": "2011-03-11 06:15:40.280 UTC", "magnitude": "7.9", "description": "47 km E of Oarai, Japan", "pdf": "pdf/wave-AMRF_global_2011-03-11_06-15-40.280Z_mwc7.9_0.2Hz.pdf?v=9ac3db3601bd5397", "preview": "preview/wave-AMRF_global_2011-03-11_06-15-40.280Z_mwc7.9_0.2Hz.jpg?v=9ac3db3601bd5397"}, {"event": "2011-03-11_05-46-24.120Z_mww9.1", "time": "2011-03-11 05:46:24.120 UTC", "magnitude": "9.1", "description": "2011 Great Tohoku Earthquake, Japan", "pdf": "pdf/wave-AMRF_global_2011-03-11_05-46-24.120Z_mww9.1_0.2Hz.pdf?v=5d4611d121800104", "preview": "preview/wave-AMRF_global_2011-03-11_05-46-24.120Z_mww9.1_0.2Hz.jpg?v=5d4611d121800104"}, {"event": "2011-03-09_02-45-20.330Z_mww7.3", "time": "2011-03-09 02:45:20.330 UTC", "magnitude": "7.3", "description": "120 km SE of Ofunato, Japan", "pdf": "pdf/wave-AMRF_global_2011-03-09_02-45-20.330Z_mww7.3_0.2Hz.pdf?v=b614b0efd900256d", "preview": "preview/wave-AMRF_global_2011-03-09_02-45-20.330Z_mww7.3_0.2Hz.jpg?v=b614b0efd900256d"}, {"event": "2010-12-21_17-19-40.660Z_mwc7.4", "time": "2010-12-21 17:19:40.660 UTC", "magnitude": "7.4", "description": "Bonin Islands, Japan region", "pdf": "pdf/wave-AMRF_global_2010-12-21_17-19-40.660Z_mwc7.4_0.2Hz.pdf?v=c96337ddd986e9cc", "preview": "preview/wave-AMRF_global_2010-12-21_17-19-40.660Z_mwc7.4_0.2Hz.jpg?v=c96337ddd986e9cc"}, {"event": "2007-09-28_13-38-57.880Z_mwc7.5", "time": "2007-09-28 13:38:57.880 UTC", "magnitude": "7.5", "description": "Volcano Islands, Japan region", "pdf": "pdf/wave-AMRF_global_2007-09-28_13-38-57.880Z_mwc7.5_0.2Hz.pdf?v=65dbe10af671d331", "preview": "preview/wave-AMRF_global_2007-09-28_13-38-57.880Z_mwc7.5_0.2Hz.jpg?v=65dbe10af671d331"}, {"event": "2004-09-05_14-57-18.610Z_mwb7.4", "time": "2004-09-05 14:57:18.610 UTC", "magnitude": "7.4", "description": "118 km ESE of Shingu, Japan", "pdf": "pdf/wave-AMRF_global_2004-09-05_14-57-18.610Z_mwb7.4_0.2Hz.pdf?v=7bf43f3b3294898c", "preview": "preview/wave-AMRF_global_2004-09-05_14-57-18.610Z_mwb7.4_0.2Hz.jpg?v=7bf43f3b3294898c"}, {"event": "2003-09-25_21-08-00.030Z_mwc7.4", "time": "2003-09-25 21:08:00.030 UTC", "magnitude": "7.3", "description": "119 km ESE of Shizunai-furukawacho, Japan", "pdf": "pdf/wave-AMRF_global_2003-09-25_21-08-00.030Z_mwc7.4_0.2Hz.pdf?v=bf32d342690a08d0", "preview": "preview/wave-AMRF_global_2003-09-25_21-08-00.030Z_mwc7.4_0.2Hz.jpg?v=bf32d342690a08d0"}, {"event": "2000-08-06_07-27-12.900Z_mwc7.4", "time": "2000-08-06 07:27:12.900 UTC", "magnitude": "7.3", "description": "Bonin Islands, Japan region", "pdf": "pdf/wave-AMRF_global_2000-08-06_07-27-12.900Z_mwc7.4_0.2Hz.pdf?v=a3985d006755c70d", "preview": "preview/wave-AMRF_global_2000-08-06_07-27-12.900Z_mwc7.4_0.2Hz.jpg?v=a3985d006755c70d"}, {"event": "2000-03-28_11-00-22.510Z_mwc7.6", "time": "2000-03-28 11:00:22.510 UTC", "magnitude": "7.6", "description": "Volcano Islands, Japan region", "pdf": "pdf/wave-AMRF_global_2000-03-28_11-00-22.510Z_mwc7.6_0.2Hz.pdf?v=04d4bae2a7136052", "preview": "preview/wave-AMRF_global_2000-03-28_11-00-22.510Z_mwc7.6_0.2Hz.jpg?v=04d4bae2a7136052"}, {"event": "1998-05-03_23-30-21.910Z_mwb7.5", "time": "1998-05-03 23:30:21.910 UTC", "magnitude": "7.4", "description": "254 km SSE of Ishigaki, Japan", "pdf": "pdf/wave-AMRF_global_1998-05-03_23-30-21.910Z_mwb7.5_0.2Hz.pdf?v=142112c916b35067", "preview": "preview/wave-AMRF_global_1998-05-03_23-30-21.910Z_mwb7.5_0.2Hz.jpg?v=142112c916b35067"}, {"event": "1994-12-28_12-19-23.030Z_mw7.8", "time": "1994-12-28 12:19:23.030 UTC", "magnitude": "7.7", "description": "off the east coast of Honshu, Japan", "pdf": "pdf/wave-AMRF_global_1994-12-28_12-19-23.030Z_mw7.8_0.2Hz.pdf?v=c5e463ec3e2fca2e", "preview": "preview/wave-AMRF_global_1994-12-28_12-19-23.030Z_mw7.8_0.2Hz.jpg?v=c5e463ec3e2fca2e"}, {"event": "1993-07-12_13-17-11.960Z_mw7.7", "time": "1993-07-12 13:17:11.960 UTC", "magnitude": "7.7", "description": "107 km W of Iwanai, Japan", "pdf": "pdf/wave-AMRF_global_1993-07-12_13-17-11.960Z_mw7.7_0.2Hz.pdf?v=0e2ad4102e12fd18", "preview": "preview/wave-AMRF_global_1993-07-12_13-17-11.960Z_mw7.7_0.2Hz.jpg?v=0e2ad4102e12fd18"}, {"event": "1993-01-15_11-06-05.950Z_mw7.6", "time": "1993-01-15 11:06:05.950 UTC", "magnitude": "7.6", "description": "52 km NE of Otofuke, Japan", "pdf": "pdf/wave-AMRF_global_1993-01-15_11-06-05.950Z_mw7.6_0.2Hz.pdf?v=3706ac2154d6d867", "preview": "preview/wave-AMRF_global_1993-01-15_11-06-05.950Z_mw7.6_0.2Hz.jpg?v=3706ac2154d6d867"}, {"event": "1989-11-01_18-25-34.940Z_mw7.4", "time": "1989-11-01 18:25:34.940 UTC", "magnitude": "7.4", "description": "73 km ENE of Miyako, Japan", "pdf": "pdf/wave-AMRF_global_1989-11-01_18-25-34.940Z_mw7.4_0.2Hz.pdf?v=701396199296c4b2", "preview": "preview/wave-AMRF_global_1989-11-01_18-25-34.940Z_mw7.4_0.2Hz.jpg?v=701396199296c4b2"}];
+    const requestedEvent = new URLSearchParams(window.location.search).get("event");
+    let currentIndex = events.findIndex(item => item.event === requestedEvent);
+    if (currentIndex < 0) currentIndex = 0;
+
+    function eventUrl(index) {
+      return "?event=" + encodeURIComponent(events[index].event);
+    }
+
+    function setNavigation(link, index) {
+      if (index < 0 || index >= events.length) {
+        link.removeAttribute("href");
+        link.classList.add("disabled");
+      } else {
+        link.href = eventUrl(index);
+      }
+    }
+
+    if (events.length > 0) {
+      const item = events[currentIndex];
+      document.getElementById("event-title").textContent =
+        item.time + "  M " + item.magnitude;
+      document.getElementById("event-region").textContent = item.description;
+      document.getElementById("direct-pdf").href = item.pdf;
+
+      const previewLink = document.getElementById("preview-link");
+      const previewImage = document.getElementById("preview-image");
+      const pdfFrame = document.getElementById("pdf-frame");
+      const previewError = document.getElementById("preview-error");
+      if (item.preview) {
+        // Public pages use a normal image. This avoids browser-specific PDF
+        // plug-ins and also works in mobile browsers.
+        previewLink.href = item.pdf;
+        previewLink.style.display = "flex";
+        pdfFrame.style.display = "none";
+        previewImage.onerror = () => {
+          previewLink.style.display = "none";
+          previewError.style.display = "block";
+        };
+        previewImage.src = item.preview;
+      } else {
+        // The local viewer retains the original PDF. Give the plug-in the
+        // full page width so that an open thumbnail sidebar cannot squeeze
+        // the plotted page into a narrow column.
+        pdfFrame.src = item.pdf + "#view=Fit&navpanes=0";
+      }
+      setNavigation(document.getElementById("newer"), currentIndex - 1);
+      setNavigation(document.getElementById("older"), currentIndex + 1);
+    } else {
+      document.getElementById("event-title").textContent = "No AMRF results available";
+      document.getElementById("newer").classList.add("disabled");
+      document.getElementById("older").classList.add("disabled");
+      document.getElementById("direct-pdf").classList.add("disabled");
+    }
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "ArrowLeft" && currentIndex > 0) {
+        window.location.href = eventUrl(currentIndex - 1);
+      }
+      if (event.key === "ArrowRight" && currentIndex + 1 < events.length) {
+        window.location.href = eventUrl(currentIndex + 1);
+      }
+    });
+  </script>
+</body>
+</html>
